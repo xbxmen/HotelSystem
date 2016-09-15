@@ -4,7 +4,7 @@
  *     Date: 2016/2/22
  *     Time: 15:25	
  *
- *     山东大学 体育馆创建 管理员接口
+ *   	宾馆管理系统  职工添加的接口想
  * */
 include_once '../mysqli/opDB.class.php';
 $response = array("statue" => '');
