@@ -1,10 +1,7 @@
 <?php
 /*
- *     Created by 赵晓帅
- *     Date: 2016/2/22
- *     Time: 11:07
  *
- *  山东大学 体育馆 管理员 登录接口
+ *  宾馆管理系统  登录接口
  * */
 include_once '../config/myDB.php';
 $response = array("statue" => '',"jibie" => "1");
@@ -18,10 +15,11 @@ if (isset($_POST['account']) && $_POST['account']
 	$res = $con->get_result($sql);
 	if($row = mysqli_fetch_assoc($res)){
 		$response['statue'] = 1;
-		$response['jibie'] = 2;
 		if($row['id'] == $row['manager_id']){
+			$response['jibie'] = 2;
 			setSession($row['id'],2,$account,$password);
 		}else{
+			$response['jibie'] = 1;
 			setSession($row['id'],1,$account,$password);
 		}
 		$con->for_close();

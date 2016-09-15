@@ -1,17 +1,26 @@
 <?php
 /*
- *   	宾馆管理系统  职工添加的接口
+ *   	宾馆管理系统  顾客入住的接口
  * */
 include_once '../config/myDB.php';
 $response = array("statue" => '');
 $con = new opDB();
-if(isset($_SESSION['account']) && $_SESSION['jibie'] == 2){
-	if(isset($_POST['account']) && $_POST['account']
-	   && isset($_POST['password']) && $_POST['password']){
-	   		$account = $_POST['account'];
-			$password = $_POST['password'];
-			$manager_id = 1;
-			$sql  = "SELECT id FROM employee WHERE account='{$account}'";
+
+if(isset($_SESSION['account'])){
+	if(isset($_POST['account']) && $_POST['account']&& $_POST['phone']&& $_POST['roomnumber']
+	   && $_POST['cardnumber'] && $_POST['name'] && $_POST['sex'] && $_POST['deposit']){
+	   		$eid = $_POST['account'];
+			$phone = $_POST['phone'];
+			$roomnumber = $_POST['roomnumber'];
+			$cardnumber = $_POST['cardnumber'];
+			$name = $_POST['name'];
+			$sex = $_POST['sex'];
+			$deposit = $_POST['deposit'];
+			
+			//房间的状态，1空2满3预定。
+			$state = 2;
+			
+			$sql1  = "insert into customer cardnumber,name,sex,phone,roomnumber,deposit,";
 			$res = $con->excute_dql($sql);
 			if($res == 1){
 				$response['statue'] = -3;
@@ -46,4 +55,5 @@ function test_input($data){
   $data = htmlspecialchars($data);
   return $data;
 }
+
 ?>

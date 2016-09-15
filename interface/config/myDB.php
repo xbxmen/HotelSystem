@@ -25,6 +25,10 @@ class opDB {
 	
 	
 	
+	
+	
+	
+	
 	//stmt_init()类
 	public function stmt($sql){
 		$stmt = $this -> mysqli -> prepare($sql);
