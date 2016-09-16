@@ -1,6 +1,6 @@
 <?php
 /*
- *   	宾馆管理系统  顾客入住的接口
+ *   	宾馆管理系统  完成订单的接口
  * */
 include_once '../config/myDB.php';
 $response = array("statue" => '');
@@ -22,7 +22,7 @@ if(isset($_SESSION['account'])){
 			$state = 2;
 			
 			$sql1  = "insert into customer (cardnumber,name,sex,phone,roomnumber,deposit,eid,checkin) values('$cardnumber','$name','$sex','$phone','$roomnumber','$deposit','$eid','$Date')";
-			$sql2  = "update room set state=2 where roomnumber = '{$roomnumber}'";
+			$sql2 = "update room set state=2 where roomnumber = '{$roomnumber}'";
 			
 			$con->excute_dml($sql1);
 			$con->excute_dml($sql2);
@@ -40,24 +40,5 @@ if(isset($_SESSION['account'])){
 	exit ;
 }
 
+
 ?>
-
-<!--$eid = "100";
-$phone = "13105195231";
-$roomnumber ="101";
-$cardnumber = "37028319951118";
-$name = "狍子";
-$sex = "男";
-$deposit = "300";
-
-echo "今天是 " . date("Y/m/d") . "<br>";
-	$Date = date("Y/m/d");
-
-//房间的状态，1空2满3预定。
-$state = 2;
-
-$sql1  = "insert into customer (cardnumber,name,sex,phone,roomnumber,deposit,eid,checkin) values('$cardnumber','$name','$sex','$phone','$roomnumber','$deposit','$eid','$Date')";
-$sql2 = "update room set state=2 where roomnumber = '{$roomnumber}'";
-
-$con->excute_dml($sql1);
-$con->excute_dml($sql2);-->
