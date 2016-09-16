@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+	<?php session_start();?>
 	<head>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 		<meta charset="utf-8" />
@@ -320,7 +320,7 @@
 								</li>
 
 								<li class="dropdown-footer">
-									<a href="inbox.html">
+									<a href="inbox.php">
 										See all messages
 										<i class="ace-icon fa fa-arrow-right"></i>
 									</a>
@@ -331,10 +331,10 @@
 						<!-- #section:basics/navbar.user_menu -->
 						<li class="light-blue">
 							<a data-toggle="dropdown" href="#" class="dropdown-toggle">
-								<img class="nav-user-photo" src="../assets/avatars/user.jpg" alt="Jason's Photo" />
+								<img class="nav-user-photo" src="./img/pangzi.jpg" alt="Jason's Photo" />
 								<span class="user-info">
 									<small>Welcome,</small>
-									Jason
+									<?php echo $_SESSION['account'];?>
 								</span>
 
 								<i class="ace-icon fa fa-caret-down"></i>
@@ -343,7 +343,7 @@
 							<ul class="user-menu dropdown-menu-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
 
 								<li>
-									<a href="EmployeeInfo.html">
+									<a href="EmployeeInfo.php">
 										<i class="ace-icon fa fa-user"></i> Profile
 									</a>
 								</li>
@@ -351,7 +351,7 @@
 								<li class="divider"></li>
 
 								<li>
-									<a href="#">
+									<a href="#" id="logOut">
 										<i class="ace-icon fa fa-power-off"></i> Logout
 									</a>
 								</li>
@@ -385,7 +385,7 @@
 
 				<ul class="nav nav-list">
 					<li class="active">
-						<a href="main.html">
+						<a href="main.php">
 							<i class="menu-icon fa fa-tachometer"></i>
 							<span class="menu-text"> HomePage </span>
 						</a>
@@ -408,7 +408,7 @@
 						<ul class="submenu">
 
 							<li class="">
-								<a href="elements.html" class="dropdown-toggle">
+								<a href="elements.php" class="dropdown-toggle">
 									<i class="menu-icon fa fa-caret-right"></i> 订单管理
 								</a>
 
@@ -416,14 +416,14 @@
 
 								<ul class="submenu">
 									<li class="">
-										<a href="PreserveView.html">
+										<a href="PreserveView.php">
 											<i class="menu-icon fa fa-eye pink"></i> 查看订单
 										</a>
 
 										<b class="arrow"></b>
 									</li>
 									<li class="">
-										<a href="PreserveAdd.html">
+										<a href="PreserveAdd.php">
 											<i class="menu-icon fa fa-plus purple"></i> 添加订单
 										</a>
 
@@ -433,7 +433,7 @@
 							</li>
 
 							<li class="">
-								<a href="CheckIn.html">
+								<a href="CheckIn.php">
 									<i class="menu-icon fa fa-caret-right"></i> 登记入住
 								</a>
 
@@ -441,7 +441,7 @@
 							</li>
 
 							<li class="">
-								<a href="CheckOut.html">
+								<a href="CheckOut.php">
 									<i class="menu-icon fa fa-caret-right"></i> 办理退房
 								</a>
 
@@ -462,7 +462,7 @@
 
 						<ul class="submenu">
 							<li class="">
-								<a href="profile.html">
+								<a href="profile.php">
 									<i class="menu-icon fa fa-caret-right"></i> 个人简介
 								</a>
 
@@ -491,7 +491,7 @@
 
 								<ul class="submenu">
 									<li class="">
-										<a href="EmployeeView.html">
+										<a href="EmployeeView.php">
 											<i class="menu-icon fa fa-leaf green"></i> 查看职工
 										</a>
 
@@ -499,7 +499,7 @@
 									</li>
 
 									<li class="">
-										<a href="EmployeeAdd.html">
+										<a href="EmployeeAdd.php">
 											<i class="menu-icon fa fa-pencil orange"></i> 添加职工
 											<b class="arrow"></b>
 										</a>
@@ -519,14 +519,14 @@
 
 								<ul class="submenu">
 									<li class="">
-										<a href="HotelView.html">
+										<a href="HotelView.php">
 											<i class="menu-icon fa fa-eye pink"></i> 查看房间类型
 										</a>
 
 										<b class="arrow"></b>
 									</li>
 									<li class="">
-										<a href="HotelAdd.html">
+										<a href="HotelAdd.php">
 											<i class="menu-icon fa fa-plus purple"></i> 添加房间信息
 										</a>
 										<b class="arrow"></b>
@@ -564,9 +564,9 @@
 					<ul class="breadcrumb">
 						<li>
 							<i class="ace-icon fa fa-home home-icon"></i>
-							<a href="main.html">Home</a>
+							<a href="HomePage.php">Home</a>
 						</li>
-						<li class="active">CheckOut</li>
+						<li class="active">EmployeeView</li>
 					</ul>
 					<!-- /.breadcrumb -->
 
@@ -583,37 +583,118 @@
 
 					<!-- /section:basics/content.searchbox -->
 				</div>
+				
 				<div class="page-content">
+
+					<!-- /section:settings.box -->
+					<div class="page-header">
+						<h1>
+							Tables
+							<small>
+								<i class="ace-icon fa fa-angle-double-right"></i>
+								Static &amp; Dynamic Tables
+							</small>
+						</h1>
+					</div><!-- /.page-header -->
+					
+					<div class="row">
+						<div class="col-xs-12">
+							<table id="simple-table" class="table table-striped table-bordered table-hover">
+								<thead>
+									<tr>
+										<th class="center">
+											<label class="pos-rel">
+												<input type="checkbox" class="ace" />
+												<span class="lbl"></span>
+											</label>
+										</th>
+										<th class="hidden-480">员工账号</th>
+										<th class="hidden-480">经理</th>
+										
+										<th class="hidden-480">
+											操作
+										</th>
+									</tr>
+								</thead>
+
+								<tbody>
+
+									<tr>
+										<td class="center">
+											<label class="pos-rel">
+												<input type="checkbox" class="ace" />
+												<span class="lbl"></span>
+											</label>
+										</td>
+
+										<td class="">
+											张三
+										</td>
+										<td>17865169626</td>
+										<td>
+											<div class="hidden-sm hidden-xs btn-group">
+												<button class="btn btn-xs btn-success">
+													<i class="ace-icon fa fa-check bigger-120"></i>
+												</button>
+
+												<button class="btn btn-xs btn-info">
+													<i class="ace-icon fa fa-pencil bigger-120"></i>
+												</button>
+
+												<button class="btn btn-xs btn-danger">
+													<i class="ace-icon fa fa-trash-o bigger-120"></i>
+												</button>
+
+												<button class="btn btn-xs btn-warning">
+													<i class="ace-icon fa fa-flag bigger-120"></i>
+												</button>
+											</div>
+
+											<div class="hidden-md hidden-lg">
+												<div class="inline pos-rel">
+													<button class="btn btn-minier btn-primary dropdown-toggle" data-toggle="dropdown" data-position="auto">
+														<i class="ace-icon fa fa-cog icon-only bigger-110"></i>
+													</button>
+
+													<ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
+														<li>
+															<a href="#" class="tooltip-info" data-rel="tooltip" title="View">
+																<span class="blue">
+																	<i class="ace-icon fa fa-search-plus bigger-120"></i>
+																</span>
+															</a>
+														</li>
+
+														<li>
+															<a href="#" class="tooltip-success" data-rel="tooltip" title="Edit">
+																<span class="green">
+																	<i class="ace-icon fa fa-pencil-square-o bigger-120"></i>
+																</span>
+															</a>
+														</li>
+
+														<li>
+															<a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
+																<span class="red">
+																	<i class="ace-icon fa fa-trash-o bigger-120"></i>
+																</span>
+															</a>
+														</li>
+													</ul>
+												</div>
+											</div>
+										</td>
+									</tr>
+
+								</tbody>
+							</table>
+						</div><!-- /.span -->
+					</div><!-- /.row -->
+					
 					<div class="row">
 						<div class="col-xs-12">
 							<!-- PAGE CONTENT BEGINS -->
-							<div class="col-xs-12">
-								<form class="form-horizontal" role="form" id="book_rome">
-            						
-            						
-									<div class="form-group">
-										<label class="col-sm-3 control-label no-padding-right" style="top: 4px;">Room Number</label>
-
-										<div class="col-sm-9">
-											<!-- #section:elements.form.input-icon -->
-
-											<span class="input-icon input-icon-right">
-												<input type="text" id="form-field-icon-2" />
-												<i class="ace-icon fa fa-leaf green"></i>
-											</span>
-											
-											<button class="btn btn-success" style="text-align:center;width: 75px; line-height:20px; height:30px; margin:10px; padding:0px; border:0px;top: -2px;" type="button" id="submit">
-                        						退房	
-                        						<i class="ace-icon fa fa-check bigger-110"></i>
-                        						
-                    						</button>
-
-											<!-- /section:elements.form.input-icon -->
-										</div>
-									</div>
-								</form>
-							</div><!-- /.col -->
-						
+							
 							<!-- PAGE CONTENT ENDS -->
 						</div>
 						<!-- /.col -->
@@ -686,6 +767,8 @@
 		<script src="../docs/assets/js/language/html.js"></script>
 		<script src="../docs/assets/js/language/css.js"></script>
 		<script src="../docs/assets/js/language/javascript.js"></script>
+		
+		<script type="text/javascript" src="./js/logout.js" ></script>
 	</body>
 
 </html>

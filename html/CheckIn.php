@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+	<?php session_start();?>
 	<head>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 		<meta charset="utf-8" />
@@ -320,7 +320,7 @@
 								</li>
 
 								<li class="dropdown-footer">
-									<a href="inbox.html">
+									<a href="inbox.php">
 										See all messages
 										<i class="ace-icon fa fa-arrow-right"></i>
 									</a>
@@ -331,10 +331,10 @@
 						<!-- #section:basics/navbar.user_menu -->
 						<li class="light-blue">
 							<a data-toggle="dropdown" href="#" class="dropdown-toggle">
-								<img class="nav-user-photo" src="../assets/avatars/user.jpg" alt="Jason's Photo" />
+								<img class="nav-user-photo" src="./img/pangzi.jpg" alt="Jason's Photo" />
 								<span class="user-info">
 									<small>Welcome,</small>
-									Jason
+									<?php echo $_SESSION['account'];?>
 								</span>
 
 								<i class="ace-icon fa fa-caret-down"></i>
@@ -343,7 +343,7 @@
 							<ul class="user-menu dropdown-menu-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
 
 								<li>
-									<a href="EmployeeInfo.html">
+									<a href="EmployeeInfo.php">
 										<i class="ace-icon fa fa-user"></i> Profile
 									</a>
 								</li>
@@ -351,8 +351,8 @@
 								<li class="divider"></li>
 
 								<li>
-									<a href="#">
-										<i class="ace-icon fa fa-power-off"></i> Logout
+									<a href="#" id="logOut">
+										<i class="ace-icon fa fa-power-off" ></i> Logout
 									</a>
 								</li>
 							</ul>
@@ -385,7 +385,7 @@
 
 				<ul class="nav nav-list">
 					<li class="active">
-						<a href="main.html">
+						<a href="HomePage.php">
 							<i class="menu-icon fa fa-tachometer"></i>
 							<span class="menu-text"> HomePage </span>
 						</a>
@@ -408,7 +408,7 @@
 						<ul class="submenu">
 
 							<li class="">
-								<a href="elements.html" class="dropdown-toggle">
+								<a href="elements.php" class="dropdown-toggle">
 									<i class="menu-icon fa fa-caret-right"></i> 订单管理
 								</a>
 
@@ -416,14 +416,14 @@
 
 								<ul class="submenu">
 									<li class="">
-										<a href="PreserveView.html">
+										<a href="PreserveView.php">
 											<i class="menu-icon fa fa-eye pink"></i> 查看订单
 										</a>
 
 										<b class="arrow"></b>
 									</li>
 									<li class="">
-										<a href="PreserveAdd.html">
+										<a href="PreserveAdd.php">
 											<i class="menu-icon fa fa-plus purple"></i> 添加订单
 										</a>
 
@@ -433,7 +433,7 @@
 							</li>
 
 							<li class="">
-								<a href="CheckIn.html">
+								<a href="CheckIn.php">
 									<i class="menu-icon fa fa-caret-right"></i> 登记入住
 								</a>
 
@@ -441,7 +441,7 @@
 							</li>
 
 							<li class="">
-								<a href="CheckOut.html">
+								<a href="CheckOut.php">
 									<i class="menu-icon fa fa-caret-right"></i> 办理退房
 								</a>
 
@@ -462,7 +462,7 @@
 
 						<ul class="submenu">
 							<li class="">
-								<a href="profile.html">
+								<a href="profile.php">
 									<i class="menu-icon fa fa-caret-right"></i> 个人简介
 								</a>
 
@@ -491,7 +491,7 @@
 
 								<ul class="submenu">
 									<li class="">
-										<a href="EmployeeView.html">
+										<a href="EmployeeView.php">
 											<i class="menu-icon fa fa-leaf green"></i> 查看职工
 										</a>
 
@@ -499,7 +499,7 @@
 									</li>
 
 									<li class="">
-										<a href="EmployeeAdd.html">
+										<a href="EmployeeAdd.php">
 											<i class="menu-icon fa fa-pencil orange"></i> 添加职工
 											<b class="arrow"></b>
 										</a>
@@ -519,14 +519,14 @@
 
 								<ul class="submenu">
 									<li class="">
-										<a href="HotelView.html">
+										<a href="HotelView.php">
 											<i class="menu-icon fa fa-eye pink"></i> 查看房间类型
 										</a>
 
 										<b class="arrow"></b>
 									</li>
 									<li class="">
-										<a href="HotelAdd.html">
+										<a href="HotelAdd.php">
 											<i class="menu-icon fa fa-plus purple"></i> 添加房间信息
 										</a>
 										<b class="arrow"></b>
@@ -564,9 +564,9 @@
 					<ul class="breadcrumb">
 						<li>
 							<i class="ace-icon fa fa-home home-icon"></i>
-							<a href="main.html">Home</a>
+							<a href="HomePage.php">Home</a>
 						</li>
-						<li class="active">PreserveView</li>
+						<li class="active">ChecIN</li>
 					</ul>
 					<!-- /.breadcrumb -->
 
@@ -583,134 +583,115 @@
 
 					<!-- /section:basics/content.searchbox -->
 				</div>
-				
 				<div class="page-content">
-
-					<!-- /section:settings.box -->
-					<div class="page-header">
-						<h1>
-							Tables
-							<small>
-								<i class="ace-icon fa fa-angle-double-right"></i>
-								Static &amp; Dynamic Tables
-							</small>
-						</h1>
-					</div><!-- /.page-header -->
-					
-					<div class="row">
-						<div class="col-xs-12">
-							<table id="simple-table" class="table table-striped table-bordered table-hover">
-								<thead>
-									<tr>
-										<th class="center">
-											<label class="pos-rel">
-												<input type="checkbox" class="ace" />
-												<span class="lbl"></span>
-											</label>
-										</th>
-										<th class="hidden-480">客户姓名</th>
-										<th class="hidden-480">手机号</th>
-										<th class="hidden-480">房间号</th>
-										<th class="hidden-480">房间类型</th>
-										<th class="hidden-480">房间价格</th>
-										<th>
-											<i class="ace-icon fa fa-clock-o bigger-110 "></i>	
-											订单日期
-										</th>
-										
-										<th class="hidden-480">状态</th>
-										<th class="hidden-480">
-											操作
-										</th>
-									</tr>
-								</thead>
-
-								<tbody>
-
-									<tr>
-										<td class="center">
-											<label class="pos-rel">
-												<input type="checkbox" class="ace" />
-												<span class="lbl"></span>
-											</label>
-										</td>
-
-										<td class="">
-											张三
-										</td>
-										<td>17865169626</td>
-										<td>301</td>
-										<td class="hidden-480">标准间</td>
-										<td>￥150</td>
-										<td>2016-11-10</td>
-	
-										<td class="hidden-480">
-											<span class="label label-sm label-success">未审核</span>
-										</td>
-
-										<td>
-											<div class="hidden-sm hidden-xs btn-group">
-												<button class="btn btn-xs btn-success">
-													<i class="ace-icon fa fa-check bigger-120"></i>
-												</button>
-
-												<button class="btn btn-xs btn-info">
-													<i class="ace-icon fa fa-pencil bigger-120"></i>
-												</button>
-
-												<button class="btn btn-xs btn-danger">
-													<i class="ace-icon fa fa-trash-o bigger-120"></i>
-												</button>
-
-												<button class="btn btn-xs btn-warning">
-													<i class="ace-icon fa fa-flag bigger-120"></i>
-												</button>
-											</div>
-
-											<div class="hidden-md hidden-lg">
-												<div class="inline pos-rel">
-													<button class="btn btn-minier btn-primary dropdown-toggle" data-toggle="dropdown" data-position="auto">
-														<i class="ace-icon fa fa-cog icon-only bigger-110"></i>
-													</button>
-
-													<ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
-														<li>
-															<a href="#" class="tooltip-info" data-rel="tooltip" title="View">
-																<span class="blue">
-																	<i class="ace-icon fa fa-search-plus bigger-120"></i>
-																</span>
-															</a>
-														</li>
-
-														<li>
-															<a href="#" class="tooltip-success" data-rel="tooltip" title="Edit">
-																<span class="green">
-																	<i class="ace-icon fa fa-pencil-square-o bigger-120"></i>
-																</span>
-															</a>
-														</li>
-
-														<li>
-															<a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
-																<span class="red">
-																	<i class="ace-icon fa fa-trash-o bigger-120"></i>
-																</span>
-															</a>
-														</li>
-													</ul>
-												</div>
-											</div>
-										</td>
-									</tr>
-
-								</tbody>
-							</table>
-						</div><!-- /.span -->
-					</div><!-- /.row -->
-					
 					<div class="row">
 						<div class="col-xs-12">
 							<!-- PAGE CONTENT BEGINS -->
+									<!-- PAGE CONTENT BEGINS -->
+								<form class="form-horizontal" role="form">
+									<!-- #section:elements.form -->
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 客户姓名 </label>
+
+										<div class="col-sm-9">
+											<input type="text" id="form-field-1" placeholder="Name" class="col-xs-10 col-sm-5" />
+										</div>
+									</div>
+									<div class="form-group">
+                						<label class="col-sm-3 control-label no-padding-right" for="room_id"> 客户性别 </label>
+                						<div class="col-sm-9">
+                    						<select class="col-xs-10 col-sm-5" id="sex" style="width: 80px;" name="sex">
+													<option value="男">男</option>
+													<option value="女">女</option>
+                    						</select>
+                						</div>
+            						</div>
+										
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 客户身份证 </label>
+
+										<div class="col-sm-9">
+											<input type="text" id="form-field-1" placeholder="IDCard" class="col-xs-10 col-sm-5" />
+										</div>
+									</div>	
+									<div class="form-group">
+                						<label class="col-sm-3 control-label no-padding-right" for="telephone"> 客户预留电话 </label>
+                						<div class="col-sm-9 ">
+                    						<div class="input-group">
+												<span class="input-group-addon">
+													<i class="ace-icon fa fa-phone"></i>
+												</span>
+												<input class="form-control input-mask-phone "  type="text" name="telephone"  id="telephone" style="width:316px"/>
+											</div>
+                						</div>
+            						</div>
+
+									<div class="space-4"></div>
+									<div class="form-group">
+                						<label class="col-sm-3 control-label no-padding-right" for="room_type"> 房间类型 </label>
+                						<div class="col-sm-9">
+                    						<select class="col-xs-10 col-sm-5" id="room_type" name="room_type" style="width: 100px;">
+													<option value="1">单人间</option>
+													<option value="2">双人间</option>
+													<option value="3">三个人</option>
+                    						</select>
+                						</div>
+            						</div>
+            						
+									<div class="space-4"></div>
+									<div class="form-group">
+                						<label class="col-sm-3 control-label no-padding-right" for="room_number"> 房间号 </label>
+                						<div class="col-sm-9">
+                    						<select class="col-xs-10 col-sm-5" id="room_number" name="room_number" style="width: 100px">
+													<option value="AR">301</option>
+													<option value="CA">302</option>
+                    						</select>
+                						</div>
+    								</div>			
+    								<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-input-readonly"> 房间押金  </label>
+
+										<div class="col-sm-9">
+											<input readonly="" type="text" class="col-xs-10 col-sm-5" value="100" />
+											<span class="help-inline col-xs-12 col-sm-7" >
+												<label class="middle" style="width: 80px;">
+													<input class="ace"  type="checkbox" id="id-disable-check"  />
+												</label>
+											</span>
+										</div>
+									</div>
+									
+
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right"> 房间费用</label>
+
+										<div class="col-sm-9">
+											<!-- #section:elements.form.input-icon -->
+											<span class="input-icon">
+												<input type="text" id="money" />
+												<i class="ace-icon fa fa-leaf blue"></i>
+											</span>
+											<!-- /section:elements.form.input-icon -->
+										</div>
+									</div>
+
+									<div class="space-4"></div>
+
+									<div class="clearfix form-actions">
+										<div class="col-md-offset-3 col-md-9" style="left: 160px;">
+											<button class="btn btn-info" type="button" style="margin: auto;">
+												<i class="ace-icon fa fa-check bigger-110"></i>
+												Submit
+											</button>
+
+											&nbsp; &nbsp; &nbsp;
+											<button class="btn" type="reset" style="left: 50px;">
+												<i class="ace-icon fa fa-undo bigger-110"></i>
+												Reset
+											</button>
+										</div>
+									</div>
+								</form>
 							
 							<!-- PAGE CONTENT ENDS -->
 						</div>
@@ -742,6 +723,11 @@
 			if('ontouchstart' in document.documentElement) document.write("<script src='../assets/js/jquery.mobile.custom.js'>" + "<" + "/script>");
 		</script>
 		<script src="../assets/js/bootstrap.js"></script>
+		
+		<script src="../assets/js/chosen.jquery.js"></script>
+		<script src="../assets/js/jquery.autosize.js"></script>
+		<script src="../assets/js/jquery.inputlimiter.1.3.1.js"></script>
+		<script src="../assets/js/jquery.maskedinput.js"></script>
 
 		<!-- page specific plugin scripts -->
 
@@ -784,6 +770,18 @@
 		<script src="../docs/assets/js/language/html.js"></script>
 		<script src="../docs/assets/js/language/css.js"></script>
 		<script src="../docs/assets/js/language/javascript.js"></script>
+		
+		<script type="text/javascript">
+			jQuery(function($) {
+				$.mask.definitions['1']='[1]';
+				$('.input-mask-idnumber').mask('999999-99999999-9999',{placeholder:" ",completed:function(){art.dialog.alert('格式不正确！'+this.val());}});
+				$('.input-mask-phone').mask('199-9999-9999',{placeholder:" ",completed:function(){}});
+				$('.input-mask-bankid').mask('9999-9999-9999-9999-999',{placeholder:" ",completed:function(){alert("You typed the following: "+this.val());}});
+				
+			
+			});
+		</script>
+		<script type="text/javascript" src="./js/logout.js" ></script>
 	</body>
 
 </html>

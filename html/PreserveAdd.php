@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+	<?php session_start();?>
 	<head>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 		<meta charset="utf-8" />
@@ -13,7 +13,8 @@
 		<link rel="stylesheet" href="../assets/css/font-awesome.css" />
 
 		<!-- page specific plugin styles -->
-
+		
+		
 		<!-- text fonts -->
 		<link rel="stylesheet" href="../assets/css/ace-fonts.css" />
 
@@ -88,74 +89,6 @@
 								<span class="badge badge-grey">4</span>
 							</a>
 
-							<ul class="dropdown-menu-right dropdown-navbar dropdown-menu dropdown-caret dropdown-close">
-								<li class="dropdown-header">
-									<i class="ace-icon fa fa-check"></i> 4 Tasks to complete
-								</li>
-
-								<li class="dropdown-content">
-									<ul class="dropdown-menu dropdown-navbar">
-										<li>
-											<a href="#">
-												<div class="clearfix">
-													<span class="pull-left">Software Update</span>
-													<span class="pull-right">65%</span>
-												</div>
-
-												<div class="progress progress-mini">
-													<div style="width:65%" class="progress-bar"></div>
-												</div>
-											</a>
-										</li>
-
-										<li>
-											<a href="#">
-												<div class="clearfix">
-													<span class="pull-left">Hardware Upgrade</span>
-													<span class="pull-right">35%</span>
-												</div>
-
-												<div class="progress progress-mini">
-													<div style="width:35%" class="progress-bar progress-bar-danger"></div>
-												</div>
-											</a>
-										</li>
-
-										<li>
-											<a href="#">
-												<div class="clearfix">
-													<span class="pull-left">Unit Testing</span>
-													<span class="pull-right">15%</span>
-												</div>
-
-												<div class="progress progress-mini">
-													<div style="width:15%" class="progress-bar progress-bar-warning"></div>
-												</div>
-											</a>
-										</li>
-
-										<li>
-											<a href="#">
-												<div class="clearfix">
-													<span class="pull-left">Bug Fixes</span>
-													<span class="pull-right">90%</span>
-												</div>
-
-												<div class="progress progress-mini progress-striped active">
-													<div style="width:90%" class="progress-bar progress-bar-success"></div>
-												</div>
-											</a>
-										</li>
-									</ul>
-								</li>
-
-								<li class="dropdown-footer">
-									<a href="#">
-										See tasks with details
-										<i class="ace-icon fa fa-arrow-right"></i>
-									</a>
-								</li>
-							</ul>
 						</li>
 
 						<li class="purple">
@@ -164,177 +97,21 @@
 								<span class="badge badge-important">8</span>
 							</a>
 
-							<ul class="dropdown-menu-right dropdown-navbar navbar-pink dropdown-menu dropdown-caret dropdown-close">
-								<li class="dropdown-header">
-									<i class="ace-icon fa fa-exclamation-triangle"></i> 8 Notifications
-								</li>
-
-								<li class="dropdown-content">
-									<ul class="dropdown-menu dropdown-navbar navbar-pink">
-										<li>
-											<a href="#">
-												<div class="clearfix">
-													<span class="pull-left">
-														<i class="btn btn-xs no-hover btn-pink fa fa-comment"></i>
-														New Comments
-													</span>
-													<span class="pull-right badge badge-info">+12</span>
-												</div>
-											</a>
-										</li>
-
-										<li>
-											<a href="#">
-												<i class="btn btn-xs btn-primary fa fa-user"></i> Bob just signed up as an editor ...
-											</a>
-										</li>
-
-										<li>
-											<a href="#">
-												<div class="clearfix">
-													<span class="pull-left">
-														<i class="btn btn-xs no-hover btn-success fa fa-shopping-cart"></i>
-														New Orders
-													</span>
-													<span class="pull-right badge badge-success">+8</span>
-												</div>
-											</a>
-										</li>
-
-										<li>
-											<a href="#">
-												<div class="clearfix">
-													<span class="pull-left">
-														<i class="btn btn-xs no-hover btn-info fa fa-twitter"></i>
-														Followers
-													</span>
-													<span class="pull-right badge badge-info">+11</span>
-												</div>
-											</a>
-										</li>
-									</ul>
-								</li>
-
-								<li class="dropdown-footer">
-									<a href="#">
-										See all notifications
-										<i class="ace-icon fa fa-arrow-right"></i>
-									</a>
-								</li>
-							</ul>
 						</li>
-
-						<li class="green">
+							<li class="green">
 							<a data-toggle="dropdown" class="dropdown-toggle" href="#">
 								<i class="ace-icon fa fa-envelope icon-animated-vertical"></i>
 								<span class="badge badge-success">5</span>
 							</a>
-
-							<ul class="dropdown-menu-right dropdown-navbar dropdown-menu dropdown-caret dropdown-close">
-								<li class="dropdown-header">
-									<i class="ace-icon fa fa-envelope-o"></i> 5 Messages
-								</li>
-
-								<li class="dropdown-content">
-									<ul class="dropdown-menu dropdown-navbar">
-										<li>
-											<a href="#" class="clearfix">
-												<img src="../assets/avatars/avatar.png" class="msg-photo" alt="Alex's Avatar" />
-												<span class="msg-body">
-													<span class="msg-title">
-														<span class="blue">Alex:</span> Ciao sociis natoque penatibus et auctor ...
-												</span>
-
-												<span class="msg-time">
-														<i class="ace-icon fa fa-clock-o"></i>
-														<span>a moment ago</span>
-												</span>
-												</span>
-											</a>
-										</li>
-
-										<li>
-											<a href="#" class="clearfix">
-												<img src="../assets/avatars/avatar3.png" class="msg-photo" alt="Susan's Avatar" />
-												<span class="msg-body">
-													<span class="msg-title">
-														<span class="blue">Susan:</span> Vestibulum id ligula porta felis euismod ...
-												</span>
-
-												<span class="msg-time">
-														<i class="ace-icon fa fa-clock-o"></i>
-														<span>20 minutes ago</span>
-												</span>
-												</span>
-											</a>
-										</li>
-
-										<li>
-											<a href="#" class="clearfix">
-												<img src="../assets/avatars/avatar4.png" class="msg-photo" alt="Bob's Avatar" />
-												<span class="msg-body">
-													<span class="msg-title">
-														<span class="blue">Bob:</span> Nullam quis risus eget urna mollis ornare ...
-												</span>
-
-												<span class="msg-time">
-														<i class="ace-icon fa fa-clock-o"></i>
-														<span>3:15 pm</span>
-												</span>
-												</span>
-											</a>
-										</li>
-
-										<li>
-											<a href="#" class="clearfix">
-												<img src="../assets/avatars/avatar2.png" class="msg-photo" alt="Kate's Avatar" />
-												<span class="msg-body">
-													<span class="msg-title">
-														<span class="blue">Kate:</span> Ciao sociis natoque eget urna mollis ornare ...
-												</span>
-
-												<span class="msg-time">
-														<i class="ace-icon fa fa-clock-o"></i>
-														<span>1:33 pm</span>
-												</span>
-												</span>
-											</a>
-										</li>
-
-										<li>
-											<a href="#" class="clearfix">
-												<img src="../assets/avatars/avatar5.png" class="msg-photo" alt="Fred's Avatar" />
-												<span class="msg-body">
-													<span class="msg-title">
-														<span class="blue">Fred:</span> Vestibulum id penatibus et auctor ...
-												</span>
-
-												<span class="msg-time">
-														<i class="ace-icon fa fa-clock-o"></i>
-														<span>10:09 am</span>
-												</span>
-												</span>
-											</a>
-										</li>
-									</ul>
-								</li>
-
-								<li class="dropdown-footer">
-									<a href="inbox.html">
-										See all messages
-										<i class="ace-icon fa fa-arrow-right"></i>
-									</a>
-								</li>
-							</ul>
 						</li>
 
 						<!-- #section:basics/navbar.user_menu -->
 						<li class="light-blue">
 							<a data-toggle="dropdown" href="#" class="dropdown-toggle">
-								<img class="nav-user-photo" src="../assets/avatars/user.jpg" alt="Jason's Photo" />
+								<img class="nav-user-photo" src="./img/pangzi.jpg" alt="Jason's Photo" />
 								<span class="user-info">
 									<small>Welcome,</small>
-									Jason
+									<?php echo $_SESSION['account'];?>
 								</span>
 
 								<i class="ace-icon fa fa-caret-down"></i>
@@ -343,7 +120,7 @@
 							<ul class="user-menu dropdown-menu-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
 
 								<li>
-									<a href="EmployeeInfo.html">
+									<a href="EmployeeInfo.php">
 										<i class="ace-icon fa fa-user"></i> Profile
 									</a>
 								</li>
@@ -351,7 +128,7 @@
 								<li class="divider"></li>
 
 								<li>
-									<a href="#">
+									<a href="#" id="logOut">
 										<i class="ace-icon fa fa-power-off"></i> Logout
 									</a>
 								</li>
@@ -385,7 +162,7 @@
 
 				<ul class="nav nav-list">
 					<li class="active">
-						<a href="main.html">
+						<a href="main.php">
 							<i class="menu-icon fa fa-tachometer"></i>
 							<span class="menu-text"> HomePage </span>
 						</a>
@@ -408,7 +185,7 @@
 						<ul class="submenu">
 
 							<li class="">
-								<a href="elements.html" class="dropdown-toggle">
+								<a href="elements.php" class="dropdown-toggle">
 									<i class="menu-icon fa fa-caret-right"></i> 订单管理
 								</a>
 
@@ -416,14 +193,14 @@
 
 								<ul class="submenu">
 									<li class="">
-										<a href="PreserveView.html">
+										<a href="PreserveView.php">
 											<i class="menu-icon fa fa-eye pink"></i> 查看订单
 										</a>
 
 										<b class="arrow"></b>
 									</li>
 									<li class="">
-										<a href="PreserveAdd.html">
+										<a href="PreserveAdd.php">
 											<i class="menu-icon fa fa-plus purple"></i> 添加订单
 										</a>
 
@@ -433,7 +210,7 @@
 							</li>
 
 							<li class="">
-								<a href="CheckIn.html">
+								<a href="CheckIn.php">
 									<i class="menu-icon fa fa-caret-right"></i> 登记入住
 								</a>
 
@@ -441,7 +218,7 @@
 							</li>
 
 							<li class="">
-								<a href="CheckOut.html">
+								<a href="CheckOut.php">
 									<i class="menu-icon fa fa-caret-right"></i> 办理退房
 								</a>
 
@@ -462,7 +239,7 @@
 
 						<ul class="submenu">
 							<li class="">
-								<a href="profile.html">
+								<a href="profile.php">
 									<i class="menu-icon fa fa-caret-right"></i> 个人简介
 								</a>
 
@@ -491,7 +268,7 @@
 
 								<ul class="submenu">
 									<li class="">
-										<a href="EmployeeView.html">
+										<a href="EmployeeView.php">
 											<i class="menu-icon fa fa-leaf green"></i> 查看职工
 										</a>
 
@@ -499,7 +276,7 @@
 									</li>
 
 									<li class="">
-										<a href="EmployeeAdd.html">
+										<a href="EmployeeAdd.php">
 											<i class="menu-icon fa fa-pencil orange"></i> 添加职工
 											<b class="arrow"></b>
 										</a>
@@ -519,14 +296,14 @@
 
 								<ul class="submenu">
 									<li class="">
-										<a href="HotelView.html">
+										<a href="HotelView.php">
 											<i class="menu-icon fa fa-eye pink"></i> 查看房间类型
 										</a>
 
 										<b class="arrow"></b>
 									</li>
 									<li class="">
-										<a href="HotelAdd.html">
+										<a href="HotelAdd.php">
 											<i class="menu-icon fa fa-plus purple"></i> 添加房间信息
 										</a>
 										<b class="arrow"></b>
@@ -564,9 +341,9 @@
 					<ul class="breadcrumb">
 						<li>
 							<i class="ace-icon fa fa-home home-icon"></i>
-							<a href="main.html">Home</a>
+							<a href="HomePage.php">Home</a>
 						</li>
-						<li class="active">HomePage</li>
+						<li class="active">PreserveAdd</li>
 					</ul>
 					<!-- /.breadcrumb -->
 
@@ -584,10 +361,122 @@
 					<!-- /section:basics/content.searchbox -->
 				</div>
 				<div class="page-content">
+					<!-- row      -->
+					<div class="row">
+						<div class="col-xs-12">
+							<h3 class="header smaller lighter blue">jQuery dataTables</h3>
+
+							<div class="clearfix">
+								<div class="pull-right tableTools-container"></div>
+							</div>
+							<div class="table-header">
+								Results for "Latest Preserves List"
+							</div>
+
+							<!-- div.table-responsive -->
+
+							<!-- div.dataTables_borderWrap -->
+							<div>
+								<table id="dynamic-table" class="table table-striped table-bordered table-hover">
+									<thead>
+										<tr>
+											<th class="center">
+												<label class="pos-rel">
+													<input type="checkbox" class="ace" />
+													<span class="lbl"></span>
+												</label>
+											</th>
+											<th>房间号</th>
+											<th>房间类型</th>
+											<th class="hidden-480">价格</th>
+											<th class="hidden-480">状态</th>
+
+											<th>操作</th>
+										</tr>
+									</thead>
+
+									<tbody id="paBody">
+									
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+
+		
+					
 					<div class="row">
 						<div class="col-xs-12">
 							<!-- PAGE CONTENT BEGINS -->
-
+							
+							<div class="row">
+									<div class="col-xs-12">
+										<form class="form-horizontal" role="form" id="book_rome">
+											<div class="form-group">
+												<label class="col-sm-3 control-label no-padding-right" for="zsname"> 客人名字 </label>
+												<div class="col-sm-9">
+													<input type="text" id="zsname" name="zsname" placeholder="客人名字" class="col-xs-10 col-sm-5" />
+												</div>
+											</div>
+											<div class="form-group">
+		                						<label class="col-sm-3 control-label no-padding-right" for="zsphone"> 电话 </label>
+		                						<div class="col-sm-9 ">
+		                    						<div class="input-group">
+														<span class="input-group-addon">
+															<i class="ace-icon fa fa-phone"></i>
+														</span>
+														<input class="form-control input-mask-phone "  type="text" name="zsphone"  id="zsphone" style="width:316px"/>
+													</div>
+		                						</div>
+		            						</div>
+											
+											<div class="form-group">
+											 	<label class="col-sm-3 control-label no-padding-right" for="zstime"> 预定时间 </label>
+		                						<div class="col-sm-9">
+		                    						<div class="input-group col-xs-5">
+		                        						<input class="form-control date-picker" placeholder="预定时间" id="zstime" name="zstime" type="text" data-date-format="yyyy-mm-dd" />
+		                            					<span class="input-group-addon ">
+									    					<i class="fa fa-calendar bigger-110"></i>
+														</span>
+		                    						</div>
+		                						</div>
+		            						</div>
+		            						
+		            						
+											<div class="form-group">
+		                						<label class="col-sm-3 control-label no-padding-right" for="zsrid"> 房间编号 </label>
+		                						<div class="col-sm-9">
+		                    						<select class="col-xs-10 col-sm-5" id="zsrid" name="zsrid">
+		                    						</select>
+		                						</div>
+		            						</div>
+		            						
+		            						<div class="form-group">
+		                						<div class="col-sm-9" style="left: 50px;">
+		                							<p id="tip" style="text-align: center;font: '微软雅黑';font-size: 16px;left: 180px;"></p>
+		                						</div>
+		            						</div>
+										
+											
+											<div class="clearfix form-actions">
+		                						<div class="col-md-offset-3 col-md-9">
+		                    						<button class="btn btn-info" type="button" id="submit">
+		                        						<i class="ace-icon fa fa-check bigger-110"></i>
+		                        						提交
+		                    						</button>
+		                    						&nbsp; &nbsp; &nbsp;
+		                    						<button class="btn" type="reset" id="reset" style="left: 30px;">
+		                        						<i class="ace-icon fa fa-undo bigger-110"></i>
+		                        						重置	
+		                    						</button>
+		                    						&nbsp; &nbsp; &nbsp;
+								                </div>
+		            						</div>
+										</form>
+									</div><!-- /.col -->
+								
+							</div><!-- /.row -->
+							
 							<!-- PAGE CONTENT ENDS -->
 						</div>
 						<!-- /.col -->
@@ -618,6 +507,13 @@
 			if('ontouchstart' in document.documentElement) document.write("<script src='../assets/js/jquery.mobile.custom.js'>" + "<" + "/script>");
 		</script>
 		<script src="../assets/js/bootstrap.js"></script>
+		
+			
+		<script src="../assets/js/chosen.jquery.js"></script>
+		<script src="../assets/js/jquery.autosize.js"></script>
+		<script src="../assets/js/jquery.inputlimiter.1.3.1.js"></script>
+		<script src="../assets/js/jquery.maskedinput.js"></script>
+		<script src="../assets/js/jquery-ui.custom.js"></script>
 
 		<!-- page specific plugin scripts -->
 
@@ -643,7 +539,7 @@
 		<script src="../assets/js/ace/ace.settings-skin.js"></script>
 		<script src="../assets/js/ace/ace.widget-on-reload.js"></script>
 		<script src="../assets/js/ace/ace.searchbox-autocomplete.js"></script>
-
+		<script src="../assets/js/date-time/bootstrap-datepicker.js"></script>
 		<!-- inline scripts related to this page -->
 
 		<!-- the following scripts are used in demo only for onpage help and you don't need them -->
@@ -660,6 +556,93 @@
 		<script src="../docs/assets/js/language/html.js"></script>
 		<script src="../docs/assets/js/language/css.js"></script>
 		<script src="../docs/assets/js/language/javascript.js"></script>
+		<script type="text/javascript">
+			jQuery(function($) {
+				$.mask.definitions['1']='[1]';
+				$('.input-mask-idnumber').mask('999999-99999999-9999',{placeholder:" ",completed:function(){art.dialog.alert('格式不正确！'+this.val());}});
+				$('.input-mask-phone').mask('199-9999-9999',{placeholder:" ",completed:function(){}});
+				$('.input-mask-bankid').mask('9999-9999-9999-9999-999',{placeholder:" ",completed:function(){alert("You typed the following: "+this.val());}});
+				
+			
+				//datepicker plugin
+				//link
+				$('.date-picker').datepicker({
+					autoclose: true,
+					todayHighlight: true
+				})
+			});
+		</script>
+		
+		<script src="./js/textTemplate.js"></script>
+		<!--向 表格里面动态添加  数据的 模板-->
+		<script type="text/template" id="tableItem">
+			<tr>
+				<td class="center">
+					<label class="pos-rel">
+						<input type="checkbox" class="ace" />
+						<span class="lbl"></span>
+					</label>
+				</td>
+
+				<td id="rnumber">{0}</td>
+				<td id="rtype">{1}</td>
+				<td class="hidden-480" id="rprice">{2}</td>
+				<td class="hidden-480">
+					<span class="label label-sm label-info arrowed arrowed-righ" id="rstate">{3}</span>
+				</td>
+				<td>
+					<div class="hidden-sm hidden-xs action-buttons">
+						<a class="blue" href="#">
+							<i class="ace-icon fa fa-search-plus bigger-130"></i>
+						</a>
+
+						<a class="green" href="#">
+							<i class="ace-icon fa fa-pencil bigger-130"></i>
+						</a>
+
+						<a class="red" href="#">
+							<i class="ace-icon fa fa-trash-o bigger-130"></i>
+						</a>
+					</div>
+
+					<div class="hidden-md hidden-lg">
+						<div class="inline pos-rel">
+							<button class="btn btn-minier btn-yellow dropdown-toggle" data-toggle="dropdown" data-position="auto">
+								<i class="ace-icon fa fa-caret-down icon-only bigger-120"></i>
+							</button>
+
+							<ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
+								<li>
+									<a href="#" class="tooltip-info" data-rel="tooltip" title="View">
+										<span class="blue">
+											<i class="ace-icon fa fa-search-plus bigger-120"></i>
+										</span>
+									</a>
+								</li>
+
+								<li>
+									<a href="#" class="tooltip-success" data-rel="tooltip" title="Edit">
+										<span class="green">
+											<i class="ace-icon fa fa-pencil-square-o bigger-120"></i>
+										</span>
+									</a>
+								</li>
+
+								<li>
+									<a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
+										<span class="red">
+											<i class="ace-icon fa fa-trash-o bigger-120"></i>
+										</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</td>
+			</tr>
+		</script>
+		<script type="text/javascript" src="./js/logout.js" ></script>
+		<script type="text/javascript" src="./js/preserveAdd.js" ></script>
 	</body>
 
 </html>

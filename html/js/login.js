@@ -11,14 +11,15 @@ $("#login").click(function(){
 			},
 			dataType:"json",
 			success: function(data){
+				
 				if(data['statue'] == 1){
-					window.location.href="main.html";
+					window.location.href="HomePage.php";
 				}else{
 					alert("账号或者密码不正确!!!");
 				}
 			},
 			error: function(data){
-				
+				console.log(data);	
 			}
 		});
 	}else{

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+	<?php session_start();?>
 	<head>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 		<meta charset="utf-8" />
@@ -13,8 +13,7 @@
 		<link rel="stylesheet" href="../assets/css/font-awesome.css" />
 
 		<!-- page specific plugin styles -->
-		
-		
+
 		<!-- text fonts -->
 		<link rel="stylesheet" href="../assets/css/ace-fonts.css" />
 
@@ -321,7 +320,7 @@
 								</li>
 
 								<li class="dropdown-footer">
-									<a href="inbox.html">
+									<a href="inbox.php">
 										See all messages
 										<i class="ace-icon fa fa-arrow-right"></i>
 									</a>
@@ -332,10 +331,10 @@
 						<!-- #section:basics/navbar.user_menu -->
 						<li class="light-blue">
 							<a data-toggle="dropdown" href="#" class="dropdown-toggle">
-								<img class="nav-user-photo" src="../assets/avatars/user.jpg" alt="Jason's Photo" />
+								<img class="nav-user-photo" src="./img/pangzi.jpg" alt="Jason's Photo" />
 								<span class="user-info">
 									<small>Welcome,</small>
-									Jason
+									<?php echo $_SESSION['account'];?>
 								</span>
 
 								<i class="ace-icon fa fa-caret-down"></i>
@@ -344,7 +343,7 @@
 							<ul class="user-menu dropdown-menu-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
 
 								<li>
-									<a href="EmployeeInfo.html">
+									<a href="EmployeeInfo.php">
 										<i class="ace-icon fa fa-user"></i> Profile
 									</a>
 								</li>
@@ -352,8 +351,8 @@
 								<li class="divider"></li>
 
 								<li>
-									<a href="#">
-										<i class="ace-icon fa fa-power-off"></i> Logout
+									<a href="#" id="logOut">
+										<i class="ace-icon fa fa-power-off" ></i> Logout
 									</a>
 								</li>
 							</ul>
@@ -386,7 +385,7 @@
 
 				<ul class="nav nav-list">
 					<li class="active">
-						<a href="main.html">
+						<a href="main.php">
 							<i class="menu-icon fa fa-tachometer"></i>
 							<span class="menu-text"> HomePage </span>
 						</a>
@@ -409,7 +408,7 @@
 						<ul class="submenu">
 
 							<li class="">
-								<a href="elements.html" class="dropdown-toggle">
+								<a href="elements.php" class="dropdown-toggle">
 									<i class="menu-icon fa fa-caret-right"></i> 订单管理
 								</a>
 
@@ -417,14 +416,14 @@
 
 								<ul class="submenu">
 									<li class="">
-										<a href="PreserveView.html">
+										<a href="PreserveView.php">
 											<i class="menu-icon fa fa-eye pink"></i> 查看订单
 										</a>
 
 										<b class="arrow"></b>
 									</li>
 									<li class="">
-										<a href="PreserveAdd.html">
+										<a href="PreserveAdd.php">
 											<i class="menu-icon fa fa-plus purple"></i> 添加订单
 										</a>
 
@@ -434,7 +433,7 @@
 							</li>
 
 							<li class="">
-								<a href="CheckIn.html">
+								<a href="CheckIn.php">
 									<i class="menu-icon fa fa-caret-right"></i> 登记入住
 								</a>
 
@@ -442,7 +441,7 @@
 							</li>
 
 							<li class="">
-								<a href="CheckOut.html">
+								<a href="CheckOut.php">
 									<i class="menu-icon fa fa-caret-right"></i> 办理退房
 								</a>
 
@@ -463,7 +462,7 @@
 
 						<ul class="submenu">
 							<li class="">
-								<a href="profile.html">
+								<a href="profile.php">
 									<i class="menu-icon fa fa-caret-right"></i> 个人简介
 								</a>
 
@@ -492,7 +491,7 @@
 
 								<ul class="submenu">
 									<li class="">
-										<a href="EmployeeView.html">
+										<a href="EmployeeView.php">
 											<i class="menu-icon fa fa-leaf green"></i> 查看职工
 										</a>
 
@@ -500,7 +499,7 @@
 									</li>
 
 									<li class="">
-										<a href="EmployeeAdd.html">
+										<a href="EmployeeAdd.php">
 											<i class="menu-icon fa fa-pencil orange"></i> 添加职工
 											<b class="arrow"></b>
 										</a>
@@ -520,14 +519,14 @@
 
 								<ul class="submenu">
 									<li class="">
-										<a href="HotelView.html">
+										<a href="HotelView.php">
 											<i class="menu-icon fa fa-eye pink"></i> 查看房间类型
 										</a>
 
 										<b class="arrow"></b>
 									</li>
 									<li class="">
-										<a href="HotelAdd.html">
+										<a href="HotelAdd.php">
 											<i class="menu-icon fa fa-plus purple"></i> 添加房间信息
 										</a>
 										<b class="arrow"></b>
@@ -565,9 +564,9 @@
 					<ul class="breadcrumb">
 						<li>
 							<i class="ace-icon fa fa-home home-icon"></i>
-							<a href="main.html">Home</a>
+							<a href="HomePage.php">Home</a>
 						</li>
-						<li class="active">PreserveView</li>
+						<li class="active">CheckOut</li>
 					</ul>
 					<!-- /.breadcrumb -->
 
@@ -585,259 +584,36 @@
 					<!-- /section:basics/content.searchbox -->
 				</div>
 				<div class="page-content">
-					<!-- row      -->
-					<div class="row">
-						<div class="col-xs-12">
-							<h3 class="header smaller lighter blue">jQuery dataTables</h3>
-
-							<div class="clearfix">
-								<div class="pull-right tableTools-container"></div>
-							</div>
-							<div class="table-header">
-								Results for "Latest Registered Domains"
-							</div>
-
-							<!-- div.table-responsive -->
-
-							<!-- div.dataTables_borderWrap -->
-							<div>
-								<table id="dynamic-table" class="table table-striped table-bordered table-hover">
-									<thead>
-										<tr>
-											<th class="center">
-												<label class="pos-rel">
-													<input type="checkbox" class="ace" />
-													<span class="lbl"></span>
-												</label>
-											</th>
-											<th>房间号</th>
-											<th>房间类型</th>
-											<th class="hidden-480">价格</th>
-											<th class="hidden-480">状态</th>
-
-											<th>操作</th>
-										</tr>
-									</thead>
-
-									<tbody>
-
-										<tr>
-											<td class="center">
-												<label class="pos-rel">
-													<input type="checkbox" class="ace" />
-													<span class="lbl"></span>
-												</label>
-											</td>
-
-											<td>
-												301
-											</td>
-											<td>单人间</td>
-											<td class="hidden-480">150</td>
-
-											<td class="hidden-480">
-												<span class="label label-sm label-success">可预订</span>
-											</td>
-
-											<td>
-												<div class="hidden-sm hidden-xs action-buttons">
-													<a class="blue" href="#">
-														<i class="ace-icon fa fa-search-plus bigger-130"></i>
-													</a>
-
-													<a class="green" href="#">
-														<i class="ace-icon fa fa-pencil bigger-130"></i>
-													</a>
-
-													<a class="red" href="#">
-														<i class="ace-icon fa fa-trash-o bigger-130"></i>
-													</a>
-												</div>
-
-												<div class="hidden-md hidden-lg">
-													<div class="inline pos-rel">
-														<button class="btn btn-minier btn-yellow dropdown-toggle" data-toggle="dropdown" data-position="auto">
-															<i class="ace-icon fa fa-caret-down icon-only bigger-120"></i>
-														</button>
-
-														<ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
-															<li>
-																<a href="#" class="tooltip-info" data-rel="tooltip" title="View">
-																	<span class="blue">
-																		<i class="ace-icon fa fa-search-plus bigger-120"></i>
-																	</span>
-																</a>
-															</li>
-
-															<li>
-																<a href="#" class="tooltip-success" data-rel="tooltip" title="Edit">
-																	<span class="green">
-																		<i class="ace-icon fa fa-pencil-square-o bigger-120"></i>
-																	</span>
-																</a>
-															</li>
-
-															<li>
-																<a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
-																	<span class="red">
-																		<i class="ace-icon fa fa-trash-o bigger-120"></i>
-																	</span>
-																</a>
-															</li>
-														</ul>
-													</div>
-												</div>
-											
-											
-											</td>
-										</tr>
-										
-										<tr>
-											<td class="center">
-												<label class="pos-rel">
-													<input type="checkbox" class="ace" />
-													<span class="lbl"></span>
-												</label>
-											</td>
-
-											<td>
-												302
-											</td>
-											<td>大床房</td>
-											<td class="hidden-480">200</td>
-											<td class="hidden-480">
-												<span class="label label-sm label-info arrowed arrowed-righ">被预定</span>
-											</td>
-
-											<td>
-												<div class="hidden-sm hidden-xs action-buttons">
-													<a class="blue" href="#">
-														<i class="ace-icon fa fa-search-plus bigger-130"></i>
-													</a>
-
-													<a class="green" href="#">
-														<i class="ace-icon fa fa-pencil bigger-130"></i>
-													</a>
-
-													<a class="red" href="#">
-														<i class="ace-icon fa fa-trash-o bigger-130"></i>
-													</a>
-												</div>
-
-												<div class="hidden-md hidden-lg">
-													<div class="inline pos-rel">
-														<button class="btn btn-minier btn-yellow dropdown-toggle" data-toggle="dropdown" data-position="auto">
-															<i class="ace-icon fa fa-caret-down icon-only bigger-120"></i>
-														</button>
-
-														<ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
-															<li>
-																<a href="#" class="tooltip-info" data-rel="tooltip" title="View">
-																	<span class="blue">
-																		<i class="ace-icon fa fa-search-plus bigger-120"></i>
-																	</span>
-																</a>
-															</li>
-
-															<li>
-																<a href="#" class="tooltip-success" data-rel="tooltip" title="Edit">
-																	<span class="green">
-																		<i class="ace-icon fa fa-pencil-square-o bigger-120"></i>
-																	</span>
-																</a>
-															</li>
-
-															<li>
-																<a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
-																	<span class="red">
-																		<i class="ace-icon fa fa-trash-o bigger-120"></i>
-																	</span>
-																</a>
-															</li>
-														</ul>
-													</div>
-												</div>
-											</td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
-						</div>
-					</div>
-
-		
-					
 					<div class="row">
 						<div class="col-xs-12">
 							<!-- PAGE CONTENT BEGINS -->
-							
-							<div class="row">
-									<div class="col-xs-12">
-										<form class="form-horizontal" role="form" id="book_rome">
-											<div class="form-group">
-												<label class="col-sm-3 control-label no-padding-right" for="name"> 客人名字 </label>
-												<div class="col-sm-9">
-													<input type="text" id="name" name="name" placeholder="客人名字" class="col-xs-10 col-sm-5" />
-												</div>
-											</div>
-											<div class="form-group">
-		                						<label class="col-sm-3 control-label no-padding-right" for="telephone"> 电话 </label>
-		                						<div class="col-sm-9 ">
-		                    						<div class="input-group">
-														<span class="input-group-addon">
-															<i class="ace-icon fa fa-phone"></i>
-														</span>
-														<input class="form-control input-mask-phone "  type="text" name="telephone"  id="telephone" style="width:316px"/>
-													</div>
-		                						</div>
-		            						</div>
+							<div class="col-xs-12">
+								<form class="form-horizontal" role="form" id="book_rome">
+            						
+            						
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" style="top: 4px;">Room Number</label>
+
+										<div class="col-sm-9">
+											<!-- #section:elements.form.input-icon -->
+
+											<span class="input-icon input-icon-right">
+												<input type="text" id="form-field-icon-2" />
+												<i class="ace-icon fa fa-leaf green"></i>
+											</span>
 											
-											<div class="form-group">
-											 	<label class="col-sm-3 control-label no-padding-right" for="booktime"> 预定时间 </label>
-		                						<div class="col-sm-9">
-		                    						<div class="input-group col-xs-5">
-		                        						<input class="form-control date-picker" placeholder="预定时间" id="booktime" name="booktime" type="text" data-date-format="yyyy-mm-dd" />
-		                            					<span class="input-group-addon ">
-									    					<i class="fa fa-calendar bigger-110"></i>
-														</span>
-		                    						</div>
-		                						</div>
-		            						</div>
-		            						
-		            						
-											<div class="form-group">
-		                						<label class="col-sm-3 control-label no-padding-right" for="room_id"> 房间编号 </label>
-		                						<div class="col-sm-9">
-		                    						<select class="col-xs-10 col-sm-5" id="room_id" name="room_id">
-								                    		<option value="AL">Alabama</option>
-															<option value="AK">Alaska</option>
-															<option value="AZ">Arizona</option>
-															<option value="AR">Arkansas</option>
-															<option value="CA">California</option>
-		                    						</select>
-		                						</div>
-		            						</div>
-										
-											
-											<div class="clearfix form-actions">
-		                						<div class="col-md-offset-3 col-md-9">
-		                    						<button class="btn btn-info" type="button" id="submit">
-		                        						<i class="ace-icon fa fa-check bigger-110"></i>
-		                        						提交
-		                    						</button>
-		                    						&nbsp; &nbsp; &nbsp;
-		                    						<button class="btn" type="reset" id="reset">
-		                        						<i class="ace-icon fa fa-undo bigger-110"></i>
-		                        						重置	
-		                    						</button>
-		                    						&nbsp; &nbsp; &nbsp;
-								                </div>
-		            						</div>
-										</form>
-									</div><!-- /.col -->
-								
-							</div><!-- /.row -->
-							
+											<button class="btn btn-success" style="text-align:center;width: 75px; line-height:20px; height:30px; margin:10px; padding:0px; border:0px;top: -2px;" type="button" id="submit">
+                        						退房	
+                        						<i class="ace-icon fa fa-check bigger-110"></i>
+                        						
+                    						</button>
+
+											<!-- /section:elements.form.input-icon -->
+										</div>
+									</div>
+								</form>
+							</div><!-- /.col -->
+						
 							<!-- PAGE CONTENT ENDS -->
 						</div>
 						<!-- /.col -->
@@ -868,13 +644,6 @@
 			if('ontouchstart' in document.documentElement) document.write("<script src='../assets/js/jquery.mobile.custom.js'>" + "<" + "/script>");
 		</script>
 		<script src="../assets/js/bootstrap.js"></script>
-		
-			
-		<script src="../assets/js/chosen.jquery.js"></script>
-		<script src="../assets/js/jquery.autosize.js"></script>
-		<script src="../assets/js/jquery.inputlimiter.1.3.1.js"></script>
-		<script src="../assets/js/jquery.maskedinput.js"></script>
-		<script src="../assets/js/jquery-ui.custom.js"></script>
 
 		<!-- page specific plugin scripts -->
 
@@ -900,7 +669,7 @@
 		<script src="../assets/js/ace/ace.settings-skin.js"></script>
 		<script src="../assets/js/ace/ace.widget-on-reload.js"></script>
 		<script src="../assets/js/ace/ace.searchbox-autocomplete.js"></script>
-		<script src="../assets/js/date-time/bootstrap-datepicker.js"></script>
+
 		<!-- inline scripts related to this page -->
 
 		<!-- the following scripts are used in demo only for onpage help and you don't need them -->
@@ -917,24 +686,8 @@
 		<script src="../docs/assets/js/language/html.js"></script>
 		<script src="../docs/assets/js/language/css.js"></script>
 		<script src="../docs/assets/js/language/javascript.js"></script>
-		
-		<script type="text/javascript">
-			jQuery(function($) {
-				$.mask.definitions['1']='[1]';
-				$('.input-mask-idnumber').mask('999999-99999999-9999',{placeholder:" ",completed:function(){art.dialog.alert('格式不正确！'+this.val());}});
-				$('.input-mask-phone').mask('199-9999-9999',{placeholder:" ",completed:function(){}});
-				$('.input-mask-bankid').mask('9999-9999-9999-9999-999',{placeholder:" ",completed:function(){alert("You typed the following: "+this.val());}});
-				
-			
-				//datepicker plugin
-				//link
-				$('.date-picker').datepicker({
-					autoclose: true,
-					todayHighlight: true
-				})
-			});
-		</script>
-
+		<script type="text/javascript" src="./js/logout.js" ></script>
 	</body>
+	
 
 </html>

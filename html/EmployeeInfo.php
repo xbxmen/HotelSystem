@@ -3574,5 +3574,7 @@
 		<script src="../docs/assets/js/language/html.js"></script>
 		<script src="../docs/assets/js/language/css.js"></script>
 		<script src="../docs/assets/js/language/javascript.js"></script>
+		
+		<script type="text/javascript" src="./js/logout.js" ></script>
 	</body>
 </html>

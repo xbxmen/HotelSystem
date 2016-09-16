@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+	<?php session_start();?>
 	<head>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 		<meta charset="utf-8" />
@@ -320,7 +320,7 @@
 								</li>
 
 								<li class="dropdown-footer">
-									<a href="inbox.html">
+									<a href="inbox.php">
 										See all messages
 										<i class="ace-icon fa fa-arrow-right"></i>
 									</a>
@@ -331,10 +331,10 @@
 						<!-- #section:basics/navbar.user_menu -->
 						<li class="light-blue">
 							<a data-toggle="dropdown" href="#" class="dropdown-toggle">
-								<img class="nav-user-photo" src="../assets/avatars/user.jpg" alt="Jason's Photo" />
+								<img class="nav-user-photo" src="./img/pangzi.jpg" alt="Jason's Photo" />
 								<span class="user-info">
 									<small>Welcome,</small>
-									Jason
+									<?php echo $_SESSION['account'];?>
 								</span>
 
 								<i class="ace-icon fa fa-caret-down"></i>
@@ -343,7 +343,7 @@
 							<ul class="user-menu dropdown-menu-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
 
 								<li>
-									<a href="EmployeeInfo.html">
+									<a href="EmployeeInfo.php">
 										<i class="ace-icon fa fa-user"></i> Profile
 									</a>
 								</li>
@@ -351,7 +351,7 @@
 								<li class="divider"></li>
 
 								<li>
-									<a href="#">
+									<a href="#" id="logOut">
 										<i class="ace-icon fa fa-power-off"></i> Logout
 									</a>
 								</li>
@@ -385,7 +385,7 @@
 
 				<ul class="nav nav-list">
 					<li class="active">
-						<a href="main.html">
+						<a href="HomePage.php">
 							<i class="menu-icon fa fa-tachometer"></i>
 							<span class="menu-text"> HomePage </span>
 						</a>
@@ -408,7 +408,7 @@
 						<ul class="submenu">
 
 							<li class="">
-								<a href="elements.html" class="dropdown-toggle">
+								<a href="elements.php" class="dropdown-toggle">
 									<i class="menu-icon fa fa-caret-right"></i> 订单管理
 								</a>
 
@@ -416,14 +416,14 @@
 
 								<ul class="submenu">
 									<li class="">
-										<a href="PreserveView.html">
+										<a href="PreserveView.php">
 											<i class="menu-icon fa fa-eye pink"></i> 查看订单
 										</a>
 
 										<b class="arrow"></b>
 									</li>
 									<li class="">
-										<a href="PreserveAdd.html">
+										<a href="PreserveAdd.php">
 											<i class="menu-icon fa fa-plus purple"></i> 添加订单
 										</a>
 
@@ -433,7 +433,7 @@
 							</li>
 
 							<li class="">
-								<a href="CheckIn.html">
+								<a href="CheckIn.php">
 									<i class="menu-icon fa fa-caret-right"></i> 登记入住
 								</a>
 
@@ -441,7 +441,7 @@
 							</li>
 
 							<li class="">
-								<a href="CheckOut.html">
+								<a href="CheckOut.php">
 									<i class="menu-icon fa fa-caret-right"></i> 办理退房
 								</a>
 
@@ -462,7 +462,7 @@
 
 						<ul class="submenu">
 							<li class="">
-								<a href="profile.html">
+								<a href="profile.php">
 									<i class="menu-icon fa fa-caret-right"></i> 个人简介
 								</a>
 
@@ -491,7 +491,7 @@
 
 								<ul class="submenu">
 									<li class="">
-										<a href="EmployeeView.html">
+										<a href="EmployeeView.php">
 											<i class="menu-icon fa fa-leaf green"></i> 查看职工
 										</a>
 
@@ -499,7 +499,7 @@
 									</li>
 
 									<li class="">
-										<a href="EmployeeAdd.html">
+										<a href="EmployeeAdd.php">
 											<i class="menu-icon fa fa-pencil orange"></i> 添加职工
 											<b class="arrow"></b>
 										</a>
@@ -519,14 +519,14 @@
 
 								<ul class="submenu">
 									<li class="">
-										<a href="HotelView.html">
+										<a href="HotelView.php">
 											<i class="menu-icon fa fa-eye pink"></i> 查看房间类型
 										</a>
 
 										<b class="arrow"></b>
 									</li>
 									<li class="">
-										<a href="HotelAdd.html">
+										<a href="HotelAdd.php">
 											<i class="menu-icon fa fa-plus purple"></i> 添加房间信息
 										</a>
 										<b class="arrow"></b>
@@ -564,9 +564,9 @@
 					<ul class="breadcrumb">
 						<li>
 							<i class="ace-icon fa fa-home home-icon"></i>
-							<a href="main.html">Home</a>
+							<a href="HomePage.php">Home</a>
 						</li>
-						<li class="active">EmployeeView</li>
+						<li class="active">PreserveView</li>
 					</ul>
 					<!-- /.breadcrumb -->
 
@@ -784,6 +784,8 @@
 		<script src="../docs/assets/js/language/html.js"></script>
 		<script src="../docs/assets/js/language/css.js"></script>
 		<script src="../docs/assets/js/language/javascript.js"></script>
+		
+		<script type="text/javascript" src="./js/logout.js" ></script>
 	</body>
 
 </html>
