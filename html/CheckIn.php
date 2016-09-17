@@ -588,7 +588,7 @@
 						<div class="col-xs-12">
 							<!-- PAGE CONTENT BEGINS -->
 									<!-- PAGE CONTENT BEGINS -->
-								<form class="form-horizontal" role="form">
+								<form class="form-horizontal" role="form" id="ciForm">
 									<!-- #section:elements.form -->
 									<div class="form-group">
 										<label class="col-sm-3 control-label no-padding-right" for="cname"> 客户姓名 </label>
@@ -630,8 +630,8 @@
 									<div class="form-group">
                 						<label class="col-sm-3 control-label no-padding-right" for="room_type"> 房间类型 </label>
                 						<div class="col-sm-9">
-                    						<select class="col-xs-10 col-sm-5" id="room_type" name="room_type" style="width: 100px;">
-													<option value="单人间">单人间</option>
+                    						<select class="col-xs-10 col-sm-5" id="room_type" onchange="getRoomNumber();"  name="room_type" style="width: 100px;">
+													<option value="单人间" selected>单人间</option>
 													<option value="双人间">双人间</option>
 													<option value="三人间">三人间</option>
                     						</select>
@@ -643,8 +643,8 @@
                 						<label class="col-sm-3 control-label no-padding-right" for="room_number"> 房间号 </label>
                 						<div class="col-sm-9">
                     						<select class="col-xs-10 col-sm-5" id="room_number" name="room_number" style="width: 100px">
-													<option value="AR">301</option>
-													<option value="CA">302</option>
+													<option value="301">301</option>
+													<option value="302">302</option>
                     						</select>
                 						</div>
     								</div>			
@@ -668,18 +668,22 @@
 											<!-- /section:elements.form.input-icon -->
 										</div>
 									</div>
-
-									<div class="space-4"></div>
+									
+									<div class="form-group">
+                						<div class="col-sm-9" style="left: 20px;">
+                							<p id="tip" style="text-align: center;font: '微软雅黑';font-size: 16px;left: 180px;"></p>
+                						</div>
+            						</div>
 
 									<div class="clearfix form-actions">
-										<div class="col-md-offset-3 col-md-9" style="left: 160px;">
+										<div class="col-md-offset-3 col-md-9" style="left: -20px;">
 											<button class="btn btn-info" type="button" id="checkin" style="margin: auto;">
 												<i class="ace-icon fa fa-check bigger-110"></i>
 												Submit
 											</button>
 
 											&nbsp; &nbsp; &nbsp;
-											<button class="btn" type="reset" style="left: 50px;">
+											<button class="btn" type="reset" style="left: 90px;">
 												<i class="ace-icon fa fa-undo bigger-110"></i>
 												Reset
 											</button>
@@ -771,11 +775,10 @@
 				$('.input-mask-idnumber').mask('999999-99999999-9999',{placeholder:" ",completed:function(){art.dialog.alert('格式不正确！'+this.val());}});
 				$('.input-mask-phone').mask('199-9999-9999',{placeholder:" ",completed:function(){}});
 				$('.input-mask-bankid').mask('9999-9999-9999-9999-999',{placeholder:" ",completed:function(){alert("You typed the following: "+this.val());}});
-				
-			
 			});
 		</script>
 		<script type="text/javascript" src="./js/logout.js" ></script>
+		<script type="text/javascript" src="./js/checkIn.js" ></script>
 	</body>
 
 </html>

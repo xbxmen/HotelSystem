@@ -4,27 +4,42 @@ jQuery(function($){
 	 * */
 	$.ajax({
 		type:"post",
-		url:"../interface/account/AvailableList.php",
+		url:"../interface/account/AvailableListType.php",
 		async:true,
 		dataType:"json",
 		success: function(data){
 			if(data['statue']  == -1){
 				window.location.href = "LoginFrame.php";
 			}else{
+				/*先清空  表格*/
 				var tabDom = $("#paBody");
 				var selDom = $("#zsrid");
+				tabDom.empty();
+				selDom.empty();
 				var length = data.length;
 				if(length == undefined){
-					
+					/*
+					 添加  房间 号
+					 * */
+					var str = "<option value='"+data.roomnumber+"'>"+data.roomnumber+"</option>";
+					selDom.append(str);
+					/*
+					 添加 表格信息
+					 * */
+					var sta = reState(data.state);
+					var str = $("#tableItem").html().format(
+						data.roomnumber,
+						data.type,
+						data.price,
+						sta
+					);
+					tabDom.append(str);
 				}else{
-					tabDom.empty();
-					selDom.empty();
 					for(var i=0;i<length;i++){
 						var str = "<option value='"+data[i].roomnumber+"'>"+data[i].roomnumber+"</option>";
 						selDom.append(str);
 					}
 					for(var i=0;i < length;i++){
-						
 						var sta = reState(data[i].state);
 						var str = $("#tableItem").html().format(
 							data[i].roomnumber,
@@ -58,7 +73,10 @@ jQuery(function($){
 		}
 		return str;
 	}
-	
+	/*
+	 提交  订单
+	 * 
+	 * */
 	$("#submit").click(function(){
 		$("#tip").text("");
 		var name = $("#zsname").val();
@@ -78,8 +96,13 @@ jQuery(function($){
 				},
 				dataType:'json',
 				success:function(data){
-					alert("添加订单成功！！！");
-					window.location.href = "PreserveAdd.php";
+					if(data['statue'] == 1){
+						alert("添加订单成功！！！");
+						window.location.href = "PreserveAdd.php";
+					}else if(data['statue'] == -1){
+						alert("登录超时！请重新登录！");
+						window.location.href = "LoginFrame.php";
+					}
 				}
 			});
 		}else{

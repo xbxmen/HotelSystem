@@ -24,7 +24,7 @@ if(isset($_SESSION['account']) && $_SESSION['account']){
 			$sql1 = "UPDATE room SET state = 3 WHERE roomnumber = '{$roomnumber}'";
 			//预定单的状态，1取消2入住3预定中
 			$sql2 = "insert into preserve (phone,rid,date,state,eid,cname) values('$phone','$roomnumber','$date','$state','$eid','$cname')";
-			if(	$con->excute_dml($sql1)  && $con->excute_dml($sql2)){
+			if(	$con->excute_dml($sql1) == 1   && $con->excute_dml($sql2) == 1){
 				$con->my_commit();
 				$response['statue'] = 1;
 				$con->for_close();
