@@ -595,14 +595,14 @@
 											<div class="form-group">
 												<label class="col-sm-3 control-label no-padding-right" for="name"> 员工账号 </label>
 												<div class="col-sm-9">
-													<input type="text" id="account" name="name" placeholder="Account" class="col-xs-10 col-sm-5" />
+													<input type="text" id="ppaccount" name="name" placeholder="Account" class="col-xs-10 col-sm-5" />
 												</div>
 											</div>
 											<div class="form-group">
 												<label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 密码 </label>
 		
 												<div class="col-sm-9">
-													<input type="password" id="pwd" placeholder="Password" class="col-xs-10 col-sm-5" />
+													<input type="password" id="pppwd" placeholder="Password" class="col-xs-10 col-sm-5" />
 													<span class="help-inline col-xs-12 col-sm-7">
 													</span>
 												</div>
@@ -612,11 +612,17 @@
 												<label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 重复密码 </label>
 		
 												<div class="col-sm-9">
-													<input type="password" id="repwd" placeholder="Password" class="col-xs-10 col-sm-5" />
+													<input type="password" id="pprepwd" placeholder="Password" class="col-xs-10 col-sm-5" />
 													<span class="help-inline col-xs-12 col-sm-7">
 													</span>
 												</div>
 											</div>
+											
+											<div class="form-group">
+		                						<div class="col-sm-9" style="left: 50px;">
+		                							<p id="tip" style="text-align: center;font: '微软雅黑';font-size: 16px;left: 180px;"></p>
+		                						</div>
+		            						</div>
 											
 											<div class="clearfix form-actions">
 		                						<div class="col-md-offset-3 col-md-9">
@@ -734,6 +740,7 @@
 			});
 		</script>
 		<script type="text/javascript" src="./js/logout.js" ></script>
+		<script type="text/javascript" src="./js/EmployeeAdd.js" ></script>
 	
 	</body>
 

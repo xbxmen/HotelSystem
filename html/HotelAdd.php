@@ -370,14 +370,14 @@
 											<div class="form-group">
 												<label class="col-sm-3 control-label no-padding-right" for="name"> 房间号 </label>
 												<div class="col-sm-9">
-													<input type="text" id="name" name="name" placeholder="房间号" class="col-xs-10 col-sm-5" />
+													<input type="text" id="ppname" name="name" placeholder="房间号" class="col-xs-10 col-sm-5" />
 												</div>
 											</div>
 											
 											<div class="form-group">
 		                						<label class="col-sm-3 control-label no-padding-right" for="room_id"> 房间类型 </label>
 		                						<div class="col-sm-9">
-		                    						<select class="col-xs-10 col-sm-5" id="room_id" name="room_id">
+		                    						<select class="col-xs-10 col-sm-5" id="pproom_id" name="room_id">
 															<option value="单人间">单人间</option>
 															<option value="双人间">双人间</option>
 															<option value="三人间">三人间</option>
@@ -389,10 +389,15 @@
 											<div class="form-group">
 												<label class="col-sm-3 control-label no-padding-right" for="name"> 房间价格 </label>
 												<div class="col-sm-9">
-													<input type="text" id="money" name="money" placeholder="房间价格" class="col-xs-10 col-sm-5" />
+													<input type="text" id="ppmoney" name="money" placeholder="房间价格" class="col-xs-10 col-sm-5" />
 												</div>
 											</div>
 		            						
+		            						<div class="form-group">
+		                						<div class="col-sm-9" style="left: 50px;">
+		                							<p id="tip" style="text-align: center;font: '微软雅黑';font-size: 16px;left: 180px;"></p>
+		                						</div>
+		            						</div>
 											
 											<div class="clearfix form-actions">
 		                						<div class="col-md-offset-3 col-md-9">
