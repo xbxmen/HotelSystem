@@ -5,14 +5,8 @@
 include_once '../config/myDB.php';
 $response = array("statue" => '');
 $con = new opDB();
-
-	/*$sql  = "SELECT account,manager_id from employee";
-	$res = $con->get_result($sql);
-	var_dump($res);*/
-	
-	
-if(isset($_SESSION['account'])){
-	$sql  = "SELECT account,manager_id from employee";
+if(isset($_SESSION['account']) && $_SESSION['jibie'] == 2){
+	$sql  = "SELECT a.account,b.account as manager from employee as a,employee as b where a.manager_id=b.id";
 	$res = $con->get_result($sql);
 	echo json_encode($con->deal_result($res));
 	exit;

@@ -3576,5 +3576,6 @@
 		<script src="../docs/assets/js/language/javascript.js"></script>
 		
 		<script type="text/javascript" src="./js/logout.js" ></script>
+		<script type="text/javascript" src="./js/session.js" ></script>
 	</body>
 </html>

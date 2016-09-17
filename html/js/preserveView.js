@@ -65,7 +65,7 @@ function cancel(obj){
 
 jQuery(function($){
 	/*
-	 显示可用的房间号
+	显示 订单列表
 	 * */
 	$.ajax({
 		type:"post",

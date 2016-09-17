@@ -1,15 +1,9 @@
 <?php
 /*
- *     Created by 赵晓帅
- *     Date: 2016/3/14
- *     Time: 21:32
- *
- *  山东大学   SESSION 验证接口
+ *   SESSION 验证接口
  * */
 include_once '../config/myDB.php';
-$response = array("statue" => '',"jibie" => "1");
 $con = new opDB();
-$response = array("statue" => '');
 $my_session = -1;
 if(isset($_SESSION['account']) && isset($_SESSION['password'])){
 	$my_session = $_SESSION['jibie'];

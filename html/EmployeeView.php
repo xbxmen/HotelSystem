@@ -385,7 +385,7 @@
 
 				<ul class="nav nav-list">
 					<li class="active">
-						<a href="main.php">
+						<a href="HomePage.php">
 							<i class="menu-icon fa fa-tachometer"></i>
 							<span class="menu-text"> HomePage </span>
 						</a>
@@ -471,7 +471,7 @@
 						</ul>
 					</li>
 
-					<li class="">
+					<li class="" id="admin" style="display: none;">
 						<a href="#" class="dropdown-toggle">
 							<i class="menu-icon fa fa-pencil-square-o"></i>
 							<span class="menu-text"> 管理员 </span>
@@ -617,75 +617,8 @@
 									</tr>
 								</thead>
 
-								<tbody>
-
-									<tr>
-										<td class="center">
-											<label class="pos-rel">
-												<input type="checkbox" class="ace" />
-												<span class="lbl"></span>
-											</label>
-										</td>
-
-										<td class="">
-											张三
-										</td>
-										<td>17865169626</td>
-										<td>
-											<div class="hidden-sm hidden-xs btn-group">
-												<button class="btn btn-xs btn-success">
-													<i class="ace-icon fa fa-check bigger-120"></i>
-												</button>
-
-												<button class="btn btn-xs btn-info">
-													<i class="ace-icon fa fa-pencil bigger-120"></i>
-												</button>
-
-												<button class="btn btn-xs btn-danger">
-													<i class="ace-icon fa fa-trash-o bigger-120"></i>
-												</button>
-
-												<button class="btn btn-xs btn-warning">
-													<i class="ace-icon fa fa-flag bigger-120"></i>
-												</button>
-											</div>
-
-											<div class="hidden-md hidden-lg">
-												<div class="inline pos-rel">
-													<button class="btn btn-minier btn-primary dropdown-toggle" data-toggle="dropdown" data-position="auto">
-														<i class="ace-icon fa fa-cog icon-only bigger-110"></i>
-													</button>
-
-													<ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
-														<li>
-															<a href="#" class="tooltip-info" data-rel="tooltip" title="View">
-																<span class="blue">
-																	<i class="ace-icon fa fa-search-plus bigger-120"></i>
-																</span>
-															</a>
-														</li>
-
-														<li>
-															<a href="#" class="tooltip-success" data-rel="tooltip" title="Edit">
-																<span class="green">
-																	<i class="ace-icon fa fa-pencil-square-o bigger-120"></i>
-																</span>
-															</a>
-														</li>
-
-														<li>
-															<a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
-																<span class="red">
-																	<i class="ace-icon fa fa-trash-o bigger-120"></i>
-																</span>
-															</a>
-														</li>
-													</ul>
-												</div>
-											</div>
-										</td>
-									</tr>
-
+								<tbody id="evBody">
+									
 								</tbody>
 							</table>
 						</div><!-- /.span -->
@@ -768,7 +701,79 @@
 		<script src="../docs/assets/js/language/css.js"></script>
 		<script src="../docs/assets/js/language/javascript.js"></script>
 		
+		<script src="./js/textTemplate.js"></script>
+		<!--向 表格里面动态添加  数据的 模板-->
+		<script type="text/template" id="tableItem">
+			<tr>
+				<td class="center">
+					<label class="pos-rel">
+						<input type="checkbox" class="ace" />
+						<span class="lbl"></span>
+					</label>
+				</td>
+
+				<td class="">
+					{0}
+				</td>
+				<td>{1}</td>
+				<td>
+					<div class="hidden-sm hidden-xs btn-group">
+						<button class="btn btn-xs btn-success">
+							<i class="ace-icon fa fa-check bigger-120"></i>
+						</button>
+
+						<button class="btn btn-xs btn-info">
+							<i class="ace-icon fa fa-pencil bigger-120"></i>
+						</button>
+
+						<button class="btn btn-xs btn-danger">
+							<i class="ace-icon fa fa-trash-o bigger-120"></i>
+						</button>
+
+						<button class="btn btn-xs btn-warning">
+							<i class="ace-icon fa fa-flag bigger-120"></i>
+						</button>
+					</div>
+
+					<div class="hidden-md hidden-lg">
+						<div class="inline pos-rel">
+							<button class="btn btn-minier btn-primary dropdown-toggle" data-toggle="dropdown" data-position="auto">
+								<i class="ace-icon fa fa-cog icon-only bigger-110"></i>
+							</button>
+
+							<ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
+								<li>
+									<a href="#" class="tooltip-info" data-rel="tooltip" title="View">
+										<span class="blue">
+											<i class="ace-icon fa fa-search-plus bigger-120"></i>
+										</span>
+									</a>
+								</li>
+
+								<li>
+									<a href="#" class="tooltip-success" data-rel="tooltip" title="Edit">
+										<span class="green">
+											<i class="ace-icon fa fa-pencil-square-o bigger-120"></i>
+										</span>
+									</a>
+								</li>
+
+								<li>
+									<a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
+										<span class="red">
+											<i class="ace-icon fa fa-trash-o bigger-120"></i>
+										</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</td>
+			</tr>
+		</script>
 		<script type="text/javascript" src="./js/logout.js" ></script>
+		<script type="text/javascript" src="./js/employeeView.js" ></script>
+		<script type="text/javascript" src="./js/session.js" ></script>
 	</body>
 
 </html>

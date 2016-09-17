@@ -5,13 +5,7 @@
 include_once '../config/myDB.php';
 $response = array("statue" => '');
 $con = new opDB();
-
-	/*$sql  = "SELECT * from room";
-	$res = $con->get_result($sql);
-	var_dump($res);*/
-	
-	
-if(isset($_SESSION['account'])){
+if(isset($_SESSION['account']) && $_SESSION['jibie'] == 2){
 	$sql  = "SELECT * from room";
 	$res = $con->get_result($sql);
 	echo json_encode($con->deal_result($res));
