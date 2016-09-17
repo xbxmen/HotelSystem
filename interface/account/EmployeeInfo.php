@@ -1,17 +1,18 @@
 <?php
 /*
- *   	宾馆管理系统  获取 没有入住的房间的接口
+ *   	宾馆管理系统  查看所有职工的接口
  * */
 include_once '../config/myDB.php';
 $response = array("statue" => '');
 $con = new opDB();
 
-//	$sql  = "SELECT * FROM room WHERE state=1";
-//	$res = $con->get_result($sql);
-//	var_dump($res);
-
+	/*$sql  = "SELECT account,manager_id from employee";
+	$res = $con->get_result($sql);
+	var_dump($res);*/
+	
+	
 if(isset($_SESSION['account'])){
-	$sql  = "SELECT * FROM room WHERE state=1";
+	$sql  = "SELECT account,manager_id from employee";
 	$res = $con->get_result($sql);
 	echo json_encode($con->deal_result($res));
 	exit;
