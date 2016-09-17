@@ -25,6 +25,4 @@ $("#login").click(function(){
 	}else{
 		alert("请您补全信息!!!");
 	}
-	
-	
 });

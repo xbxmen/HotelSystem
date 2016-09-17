@@ -4,7 +4,7 @@ jQuery(function($){
 	 * */
 	$.ajax({
 		type:"post",
-		url:"../interface/account/AvailableListType.php",
+		url:"../interface/account/AvailableList.php",
 		async:true,
 		dataType:"json",
 		success: function(data){

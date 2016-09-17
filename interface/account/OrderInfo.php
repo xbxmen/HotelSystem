@@ -12,7 +12,7 @@ $con = new opDB();
 	
 	
 if(isset($_SESSION['account'])){
-	$sql  = "SELECT cname,phone,rid,type,price,preserve.state,date FROM room,preserve where roomnumber=rid";
+	$sql  = "SELECT preserve.id as id,cname,phone,rid,type,price,preserve.state,date FROM room,preserve where roomnumber=rid";
 	$res = $con->get_result($sql);
 	echo json_encode($con->deal_result($res));
 	exit;

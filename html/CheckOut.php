@@ -593,12 +593,12 @@
             						
 									<div class="form-group">
 										<label class="col-sm-3 control-label no-padding-right" style="top: 4px;">Room Number</label>
-
+	
 										<div class="col-sm-9">
 											<!-- #section:elements.form.input-icon -->
 
 											<span class="input-icon input-icon-right">
-												<input type="text" id="form-field-icon-2" />
+												<input type="text" id="room_number" />
 												<i class="ace-icon fa fa-leaf green"></i>
 											</span>
 											
@@ -610,6 +610,11 @@
 
 											<!-- /section:elements.form.input-icon -->
 										</div>
+										<div class="form-group">
+	                						<div class="col-sm-9" style="left: 50px;">
+	                							<p id="tip" style="text-align: center;font: '微软雅黑';font-size: 16px;left: 180px;"></p>
+	                						</div>
+	            						</div>
 									</div>
 								</form>
 							</div><!-- /.col -->
@@ -687,6 +692,7 @@
 		<script src="../docs/assets/js/language/css.js"></script>
 		<script src="../docs/assets/js/language/javascript.js"></script>
 		<script type="text/javascript" src="./js/logout.js" ></script>
+		<script type="text/javascript" src="./js/checkout.js" ></script>
 	</body>
 	
 

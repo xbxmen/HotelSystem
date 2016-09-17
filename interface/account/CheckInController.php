@@ -5,7 +5,7 @@
 include_once '../config/myDB.php';
 $response = array("statue" => '');
 $con = new opDB();
-
+$con->auto_commit();
 if(isset($_SESSION['account'])){
 	if($_POST['phone'] && $_POST['roomnumber'] && $_POST['cardnumber'] && $_POST['name'] 
 	&& $_POST['sex'] && $_POST['deposit'] && $_POST['money']){
@@ -20,18 +20,19 @@ if(isset($_SESSION['account'])){
 			$checkin = date("Y/m/d");
 			
 			//房间的状态，1空2满3预定。
-			$state = 2;
 			
 			$sql1  = "insert into customer (cardnumber,name,sex,phone,roomnumber,deposit,eid,checkin,money) values('$cardnumber','$name','$sex','$phone','$roomnumber','$deposit','$eid','$checkin','$money')";
 			
 			$sql2  = "update room set state=2 where roomnumber='{$roomnumber}'";
 			
 			if($con->excute_dml($sql1) == 1 && $con->excute_dml($sql2) == 1){
+				$con->my_commit();
 				$response['statue'] = 1;
 				$con->for_close();
 				echo json_encode($response);
 				exit ;
 			}else{
+				$con->my_rollback();
 				$response['statue'] = -3;
 				$con->for_close();
 				echo json_encode($response);

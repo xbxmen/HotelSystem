@@ -94,60 +94,6 @@
 								</li>
 
 								<li class="dropdown-content">
-									<ul class="dropdown-menu dropdown-navbar">
-										<li>
-											<a href="#">
-												<div class="clearfix">
-													<span class="pull-left">Software Update</span>
-													<span class="pull-right">65%</span>
-												</div>
-
-												<div class="progress progress-mini">
-													<div style="width:65%" class="progress-bar"></div>
-												</div>
-											</a>
-										</li>
-
-										<li>
-											<a href="#">
-												<div class="clearfix">
-													<span class="pull-left">Hardware Upgrade</span>
-													<span class="pull-right">35%</span>
-												</div>
-
-												<div class="progress progress-mini">
-													<div style="width:35%" class="progress-bar progress-bar-danger"></div>
-												</div>
-											</a>
-										</li>
-
-										<li>
-											<a href="#">
-												<div class="clearfix">
-													<span class="pull-left">Unit Testing</span>
-													<span class="pull-right">15%</span>
-												</div>
-
-												<div class="progress progress-mini">
-													<div style="width:15%" class="progress-bar progress-bar-warning"></div>
-												</div>
-											</a>
-										</li>
-
-										<li>
-											<a href="#">
-												<div class="clearfix">
-													<span class="pull-left">Bug Fixes</span>
-													<span class="pull-right">90%</span>
-												</div>
-
-												<div class="progress progress-mini progress-striped active">
-													<div style="width:90%" class="progress-bar progress-bar-success"></div>
-												</div>
-											</a>
-										</li>
-									</ul>
-								</li>
 
 								<li class="dropdown-footer">
 									<a href="#">
@@ -169,52 +115,6 @@
 									<i class="ace-icon fa fa-exclamation-triangle"></i> 8 Notifications
 								</li>
 
-								<li class="dropdown-content">
-									<ul class="dropdown-menu dropdown-navbar navbar-pink">
-										<li>
-											<a href="#">
-												<div class="clearfix">
-													<span class="pull-left">
-														<i class="btn btn-xs no-hover btn-pink fa fa-comment"></i>
-														New Comments
-													</span>
-													<span class="pull-right badge badge-info">+12</span>
-												</div>
-											</a>
-										</li>
-
-										<li>
-											<a href="#">
-												<i class="btn btn-xs btn-primary fa fa-user"></i> Bob just signed up as an editor ...
-											</a>
-										</li>
-
-										<li>
-											<a href="#">
-												<div class="clearfix">
-													<span class="pull-left">
-														<i class="btn btn-xs no-hover btn-success fa fa-shopping-cart"></i>
-														New Orders
-													</span>
-													<span class="pull-right badge badge-success">+8</span>
-												</div>
-											</a>
-										</li>
-
-										<li>
-											<a href="#">
-												<div class="clearfix">
-													<span class="pull-left">
-														<i class="btn btn-xs no-hover btn-info fa fa-twitter"></i>
-														Followers
-													</span>
-													<span class="pull-right badge badge-info">+11</span>
-												</div>
-											</a>
-										</li>
-									</ul>
-								</li>
-
 								<li class="dropdown-footer">
 									<a href="#">
 										See all notifications
@@ -233,97 +133,6 @@
 							<ul class="dropdown-menu-right dropdown-navbar dropdown-menu dropdown-caret dropdown-close">
 								<li class="dropdown-header">
 									<i class="ace-icon fa fa-envelope-o"></i> 5 Messages
-								</li>
-
-								<li class="dropdown-content">
-									<ul class="dropdown-menu dropdown-navbar">
-										<li>
-											<a href="#" class="clearfix">
-												<img src="../assets/avatars/avatar.png" class="msg-photo" alt="Alex's Avatar" />
-												<span class="msg-body">
-													<span class="msg-title">
-														<span class="blue">Alex:</span> Ciao sociis natoque penatibus et auctor ...
-												</span>
-
-												<span class="msg-time">
-														<i class="ace-icon fa fa-clock-o"></i>
-														<span>a moment ago</span>
-												</span>
-												</span>
-											</a>
-										</li>
-
-										<li>
-											<a href="#" class="clearfix">
-												<img src="../assets/avatars/avatar3.png" class="msg-photo" alt="Susan's Avatar" />
-												<span class="msg-body">
-													<span class="msg-title">
-														<span class="blue">Susan:</span> Vestibulum id ligula porta felis euismod ...
-												</span>
-
-												<span class="msg-time">
-														<i class="ace-icon fa fa-clock-o"></i>
-														<span>20 minutes ago</span>
-												</span>
-												</span>
-											</a>
-										</li>
-
-										<li>
-											<a href="#" class="clearfix">
-												<img src="../assets/avatars/avatar4.png" class="msg-photo" alt="Bob's Avatar" />
-												<span class="msg-body">
-													<span class="msg-title">
-														<span class="blue">Bob:</span> Nullam quis risus eget urna mollis ornare ...
-												</span>
-
-												<span class="msg-time">
-														<i class="ace-icon fa fa-clock-o"></i>
-														<span>3:15 pm</span>
-												</span>
-												</span>
-											</a>
-										</li>
-
-										<li>
-											<a href="#" class="clearfix">
-												<img src="../assets/avatars/avatar2.png" class="msg-photo" alt="Kate's Avatar" />
-												<span class="msg-body">
-													<span class="msg-title">
-														<span class="blue">Kate:</span> Ciao sociis natoque eget urna mollis ornare ...
-												</span>
-
-												<span class="msg-time">
-														<i class="ace-icon fa fa-clock-o"></i>
-														<span>1:33 pm</span>
-												</span>
-												</span>
-											</a>
-										</li>
-
-										<li>
-											<a href="#" class="clearfix">
-												<img src="../assets/avatars/avatar5.png" class="msg-photo" alt="Fred's Avatar" />
-												<span class="msg-body">
-													<span class="msg-title">
-														<span class="blue">Fred:</span> Vestibulum id penatibus et auctor ...
-												</span>
-
-												<span class="msg-time">
-														<i class="ace-icon fa fa-clock-o"></i>
-														<span>10:09 am</span>
-												</span>
-												</span>
-											</a>
-										</li>
-									</ul>
-								</li>
-
-								<li class="dropdown-footer">
-									<a href="inbox.php">
-										See all messages
-										<i class="ace-icon fa fa-arrow-right"></i>
-									</a>
 								</li>
 							</ul>
 						</li>
@@ -798,27 +607,27 @@
 				<td class="" style="font: '微软雅黑';">
 					{1}
 				</td>
-				<td >{2}</td>
+				<td>{2}</td>
 				<td>{3}</td>
 				<td class="hidden-480">{4}</td>
 				<td>{5}</td>
 				<td>{6}</td>
 
 				<td class="hidden-480">
-					<span class="label label-sm label-success">{7}</span>
+					<span class="label label-sm label-success" id="pid{0}">{7}</span>
 				</td>
 
 				<td>
 					<div class="hidden-sm hidden-xs btn-group">
-						<button class="btn btn-xs btn-success" rid='{0}' pid='{3}'>
+						<button class="btn btn-xs btn-success" value="入住" rid='{3}' pid='{0}' onclick="checkin(this)">
 							<i class="ace-icon fa fa-check bigger-120"></i>
 						</button>
 
-						<button class="btn btn-xs btn-info" rid='{0}' pid='{3}'>
+						<button class="btn btn-xs btn-info" rid='{3}' pid='{0}'>
 							<i class="ace-icon fa fa-pencil bigger-120"></i>
 						</button>
 
-						<button class="btn btn-xs btn-danger" rid='{0}' pid='{3}'>
+						<button class="btn btn-xs btn-danger" rid='{3}' pid='{0}' onclick="cancel(this)">
 							<i class="ace-icon fa fa-trash-o bigger-120"></i>
 						</button>
 
@@ -832,8 +641,8 @@
 
 							<ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
 								<li>
-									<a href="#" class="tooltip-info" data-rel="tooltip" title="View">
-										<span class="blue" rid='{0}' pid='{3}'>
+									<a href="#" class="tooltip-info" data-rel="tooltip" title="View" >
+										<span class="blue" rid='{3}' pid='{0}' onclick="checkin(this)">
 											<i class="ace-icon fa fa-search-plus bigger-120"></i>
 										</span>
 									</a>
@@ -841,14 +650,14 @@
 
 								<li>
 									<a href="#" class="tooltip-success" data-rel="tooltip" title="Edit">
-										<span class="green" rid='{0}' pid='{3}'>
+										<span class="green" rid='{3}' pid='{0}'>
 											<i class="ace-icon fa fa-pencil-square-o bigger-120"></i>
 										</span>
 									</a>
 								</li>
 								<li>
 									<a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
-										<span class="red" rid='{0}' pid='{3}'>
+										<span class="red" rid='{3}' pid='{0}' onclick="cancel(this)">
 											<i class="ace-icon fa fa-trash-o bigger-120"></i>
 										</span>
 									</a>
