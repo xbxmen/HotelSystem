@@ -6,11 +6,6 @@ include_once '../config/myDB.php';
 $response = array("statue" => '');
 $con = new opDB();
 
-/*	$sql  = "SELECT cname,phone,rid,type,price,preserve.state,date FROM room,preserve where roomnumber=rid";
-	$res = $con->get_result($sql);
-	var_dump($res);*/
-	
-	
 if(isset($_SESSION['account'])){
 	$sql  = "SELECT preserve.id as id,cname,phone,rid,type,price,preserve.state,date FROM room,preserve where roomnumber=rid";
 	$res = $con->get_result($sql);

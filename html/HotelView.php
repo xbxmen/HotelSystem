@@ -385,7 +385,7 @@
 
 				<ul class="nav nav-list">
 					<li class="active">
-						<a href="main.php">
+						<a href="HomePage.php">
 							<i class="menu-icon fa fa-tachometer"></i>
 							<span class="menu-text"> HomePage </span>
 						</a>
@@ -471,7 +471,7 @@
 						</ul>
 					</li>
 
-					<li class="">
+					<li class="" id="admin" style="display: none;">
 						<a href="#" class="dropdown-toggle">
 							<i class="menu-icon fa fa-pencil-square-o"></i>
 							<span class="menu-text"> 管理员 </span>
@@ -611,133 +611,13 @@
 										</tr>
 									</thead>
 
-									<tbody>
+									<tbody id="hvBody">
 
-										<tr>
-											<td>
-												301
-											</td>
-											<td>单人间</td>
-											<td class="hidden-480">150</td>
-
-											<td>
-												<div class="hidden-sm hidden-xs action-buttons">
-													<a class="blue" href="#">
-														<i class="ace-icon fa fa-search-plus bigger-130"></i>
-													</a>
-
-													<a class="green" href="#">
-														<i class="ace-icon fa fa-pencil bigger-130"></i>
-													</a>
-
-													<a class="red" href="#">
-														<i class="ace-icon fa fa-trash-o bigger-130"></i>
-													</a>
-												</div>
-
-												<div class="hidden-md hidden-lg">
-													<div class="inline pos-rel">
-														<button class="btn btn-minier btn-yellow dropdown-toggle" data-toggle="dropdown" data-position="auto">
-															<i class="ace-icon fa fa-caret-down icon-only bigger-120"></i>
-														</button>
-
-														<ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
-															<li>
-																<a href="#" class="tooltip-info" data-rel="tooltip" title="View">
-																	<span class="blue">
-																		<i class="ace-icon fa fa-search-plus bigger-120"></i>
-																	</span>
-																</a>
-															</li>
-
-															<li>
-																<a href="#" class="tooltip-success" data-rel="tooltip" title="Edit">
-																	<span class="green">
-																		<i class="ace-icon fa fa-pencil-square-o bigger-120"></i>
-																	</span>
-																</a>
-															</li>
-
-															<li>
-																<a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
-																	<span class="red">
-																		<i class="ace-icon fa fa-trash-o bigger-120"></i>
-																	</span>
-																</a>
-															</li>
-														</ul>
-													</div>
-												</div>
-											
-											
-											</td>
-										</tr>
-										
-										<tr>
-											<td>
-												302
-											</td>
-											<td>大床房</td>
-											<td class="hidden-480">200</td>
-
-											<td>
-												<div class="hidden-sm hidden-xs action-buttons">
-													<a class="blue" href="#">
-														<i class="ace-icon fa fa-search-plus bigger-130"></i>
-													</a>
-
-													<a class="green" href="#">
-														<i class="ace-icon fa fa-pencil bigger-130"></i>
-													</a>
-
-													<a class="red" href="#">
-														<i class="ace-icon fa fa-trash-o bigger-130"></i>
-													</a>
-												</div>
-
-												<div class="hidden-md hidden-lg">
-													<div class="inline pos-rel">
-														<button class="btn btn-minier btn-yellow dropdown-toggle" data-toggle="dropdown" data-position="auto">
-															<i class="ace-icon fa fa-caret-down icon-only bigger-120"></i>
-														</button>
-
-														<ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
-															<li>
-																<a href="#" class="tooltip-info" data-rel="tooltip" title="View">
-																	<span class="blue">
-																		<i class="ace-icon fa fa-search-plus bigger-120"></i>
-																	</span>
-																</a>
-															</li>
-
-															<li>
-																<a href="#" class="tooltip-success" data-rel="tooltip" title="Edit">
-																	<span class="green">
-																		<i class="ace-icon fa fa-pencil-square-o bigger-120"></i>
-																	</span>
-																</a>
-															</li>
-
-															<li>
-																<a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
-																	<span class="red">
-																		<i class="ace-icon fa fa-trash-o bigger-120"></i>
-																	</span>
-																</a>
-															</li>
-														</ul>
-													</div>
-												</div>
-											</td>
-										</tr>
 									</tbody>
 								</table>
 							</div>
 						</div>
 					</div>
-
-		
-
 					
 					<div class="row">
 						<div class="col-xs-12">
@@ -816,7 +696,71 @@
 		<script src="../docs/assets/js/language/css.js"></script>
 		<script src="../docs/assets/js/language/javascript.js"></script>
 		
+		<script src="./js/textTemplate.js"></script>
+		<!--向 表格里面动态添加  数据的 模板-->
+		<script type="text/template" id="tableItem">
+			<tr>
+				<td>
+					{0}
+				</td>
+				<td>{1}</td>
+				<td class="hidden-480">{2}</td>
+
+				<td>
+					<div class="hidden-sm hidden-xs action-buttons">
+						<a class="blue" href="#">
+							<i class="ace-icon fa fa-search-plus bigger-130"></i>
+						</a>
+
+						<a class="green" href="#">
+							<i class="ace-icon fa fa-pencil bigger-130"></i>
+						</a>
+
+						<a class="red" href="#">
+							<i class="ace-icon fa fa-trash-o bigger-130"></i>
+						</a>
+					</div>
+
+					<div class="hidden-md hidden-lg">
+						<div class="inline pos-rel">
+							<button class="btn btn-minier btn-yellow dropdown-toggle" data-toggle="dropdown" data-position="auto">
+								<i class="ace-icon fa fa-caret-down icon-only bigger-120"></i>
+							</button>
+
+							<ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
+								<li>
+									<a href="#" class="tooltip-info" data-rel="tooltip" title="View">
+										<span class="blue">
+											<i class="ace-icon fa fa-search-plus bigger-120"></i>
+										</span>
+									</a>
+								</li>
+
+								<li>
+									<a href="#" class="tooltip-success" data-rel="tooltip" title="Edit">
+										<span class="green">
+											<i class="ace-icon fa fa-pencil-square-o bigger-120"></i>
+										</span>
+									</a>
+								</li>
+
+								<li>
+									<a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
+										<span class="red">
+											<i class="ace-icon fa fa-trash-o bigger-120"></i>
+										</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</td>
+			</tr>
+		</script>
 		<script type="text/javascript" src="./js/logout.js" ></script>
+		<script type="text/javascript" src="./js/hotelView.js" ></script>
+		<script type="text/javascript" src="./js/session.js" ></script>
+		
 	</body>
 
 </html>

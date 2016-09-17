@@ -471,7 +471,7 @@
 						</ul>
 					</li>
 
-					<li class="">
+					<li class="" id="admin" style="display: none;">
 						<a href="#" class="dropdown-toggle">
 							<i class="menu-icon fa fa-pencil-square-o"></i>
 							<span class="menu-text"> 管理员 </span>
@@ -779,6 +779,7 @@
 		</script>
 		<script type="text/javascript" src="./js/logout.js" ></script>
 		<script type="text/javascript" src="./js/checkIn.js" ></script>
+		<script type="text/javascript" src="./js/session.js" ></script>
 	</body>
 
 </html>
