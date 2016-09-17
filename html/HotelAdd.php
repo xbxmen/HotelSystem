@@ -370,14 +370,14 @@
 											<div class="form-group">
 												<label class="col-sm-3 control-label no-padding-right" for="name"> 房间号 </label>
 												<div class="col-sm-9">
-													<input type="text" id="ppname" name="name" placeholder="房间号" class="col-xs-10 col-sm-5" />
+													<input type="text" id="pproomnumber" name="name" placeholder="房间号" class="col-xs-10 col-sm-5" />
 												</div>
 											</div>
 											
 											<div class="form-group">
 		                						<label class="col-sm-3 control-label no-padding-right" for="room_id"> 房间类型 </label>
 		                						<div class="col-sm-9">
-		                    						<select class="col-xs-10 col-sm-5" id="pproom_id" name="room_id">
+		                    						<select class="col-xs-10 col-sm-5" id="pptype" name="room_id">
 															<option value="单人间">单人间</option>
 															<option value="双人间">双人间</option>
 															<option value="三人间">三人间</option>
@@ -389,7 +389,7 @@
 											<div class="form-group">
 												<label class="col-sm-3 control-label no-padding-right" for="name"> 房间价格 </label>
 												<div class="col-sm-9">
-													<input type="text" id="ppmoney" name="money" placeholder="房间价格" class="col-xs-10 col-sm-5" />
+													<input type="text" id="ppprice" name="money" placeholder="房间价格" class="col-xs-10 col-sm-5" />
 												</div>
 											</div>
 		            						
@@ -492,6 +492,7 @@
 		<script src="../docs/assets/js/language/javascript.js"></script>
 		
 		<script type="text/javascript" src="./js/logout.js" ></script>
+		<script type="text/javascript" src="./js/HotelAdd.js" ></script>
 	</body>
 
 </html>
