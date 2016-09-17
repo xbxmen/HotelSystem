@@ -1,17 +1,25 @@
 function getRoomNumber(){
+	$("#tip").text("");	
 	var type = $("#room_type").val();
+	var selDom = $("#room_number");
+	selDom.empty();
 	console.log(type);
 	$.ajax({
 		type:"post",
-		url:"../interface/account/AvailableList.php",
+		url:"../interface/account/AvaListAccordingType.php",
 		async:true,
 		dataType:"json",
-		data:{"type":'单人间'},
+		data:{"type":type},
 		success: function(data){
+			console.log(data);
 			if(data['statue']  == -1){
 				window.location.href = "LoginFrame.php";
+			}else if(data['statue'] == -3){
+				var str = "<option value=''></option>";
+				selDom.append(str);
+				$("#tip").text(type+"已经没有房间了！！");	
+				return;
 			}else{
-				var selDom = $("#room_number");
 				var length = data.length;
 				if(length == undefined){
 					var str = "<option value='"+data.roomnumber+"'>"+data.roomnumber+"</option>";
@@ -76,7 +84,8 @@ jQuery(function($){
 				}
 			});
 		}else{
-			$("#tip").text("请您补全上面的信息好不好了啦！！！");			
+			$("#tip").text("请您补全上面的信息好不好了啦！！！");
+			return;
 		}
 	});
 });
