@@ -625,8 +625,7 @@
 									</tr>
 								</thead>
 
-								<tbody>
-
+								<tbody id="pvBody">
 									<tr>
 										<td class="center">
 											<label class="pos-rel">
@@ -785,7 +784,84 @@
 		<script src="../docs/assets/js/language/css.js"></script>
 		<script src="../docs/assets/js/language/javascript.js"></script>
 		
+		<script src="./js/textTemplate.js"></script>
+		<!--向 表格里面动态添加  数据的 模板-->
+		<script type="text/template" id="tableItem">
+			<tr>
+				<td class="center">
+					<label class="pos-rel">
+						<input type="checkbox" class="ace" />
+						<span class="lbl"></span>
+					</label>
+				</td>
+				<td style="display: none;">{0}</td>
+				<td class="" style="font: '微软雅黑';">
+					{1}
+				</td>
+				<td >{2}</td>
+				<td>{3}</td>
+				<td class="hidden-480">{4}</td>
+				<td>{5}</td>
+				<td>{6}</td>
+
+				<td class="hidden-480">
+					<span class="label label-sm label-success">{7}</span>
+				</td>
+
+				<td>
+					<div class="hidden-sm hidden-xs btn-group">
+						<button class="btn btn-xs btn-success" rid='{0}' pid='{3}'>
+							<i class="ace-icon fa fa-check bigger-120"></i>
+						</button>
+
+						<button class="btn btn-xs btn-info" rid='{0}' pid='{3}'>
+							<i class="ace-icon fa fa-pencil bigger-120"></i>
+						</button>
+
+						<button class="btn btn-xs btn-danger" rid='{0}' pid='{3}'>
+							<i class="ace-icon fa fa-trash-o bigger-120"></i>
+						</button>
+
+					</div>
+
+					<div class="hidden-md hidden-lg">
+						<div class="inline pos-rel">
+							<button class="btn btn-minier btn-primary dropdown-toggle" data-toggle="dropdown" data-position="auto">
+								<i class="ace-icon fa fa-cog icon-only bigger-110"></i>
+							</button>
+
+							<ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
+								<li>
+									<a href="#" class="tooltip-info" data-rel="tooltip" title="View">
+										<span class="blue" rid='{0}' pid='{3}'>
+											<i class="ace-icon fa fa-search-plus bigger-120"></i>
+										</span>
+									</a>
+								</li>
+
+								<li>
+									<a href="#" class="tooltip-success" data-rel="tooltip" title="Edit">
+										<span class="green" rid='{0}' pid='{3}'>
+											<i class="ace-icon fa fa-pencil-square-o bigger-120"></i>
+										</span>
+									</a>
+								</li>
+								<li>
+									<a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
+										<span class="red" rid='{0}' pid='{3}'>
+											<i class="ace-icon fa fa-trash-o bigger-120"></i>
+										</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</td>
+			</tr>
+		</script>
+		
 		<script type="text/javascript" src="./js/logout.js" ></script>
+		<script type="text/javascript" src="./js/preserveView.js" ></script>
 	</body>
 
 </html>

@@ -591,16 +591,16 @@
 								<form class="form-horizontal" role="form">
 									<!-- #section:elements.form -->
 									<div class="form-group">
-										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 客户姓名 </label>
+										<label class="col-sm-3 control-label no-padding-right" for="cname"> 客户姓名 </label>
 
 										<div class="col-sm-9">
-											<input type="text" id="form-field-1" placeholder="Name" class="col-xs-10 col-sm-5" />
+											<input type="text" id="cname" placeholder="Name" class="col-xs-10 col-sm-5" />
 										</div>
 									</div>
 									<div class="form-group">
-                						<label class="col-sm-3 control-label no-padding-right" for="room_id"> 客户性别 </label>
+                						<label class="col-sm-3 control-label no-padding-right" for="csex"> 客户性别 </label>
                 						<div class="col-sm-9">
-                    						<select class="col-xs-10 col-sm-5" id="sex" style="width: 80px;" name="sex">
+                    						<select class="col-xs-10 col-sm-5" id="csex" style="width: 80px;" name="sex">
 													<option value="男">男</option>
 													<option value="女">女</option>
                     						</select>
@@ -608,20 +608,20 @@
             						</div>
 										
 									<div class="form-group">
-										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 客户身份证 </label>
+										<label class="col-sm-3 control-label no-padding-right" for="idcard"> 客户身份证 </label>
 
 										<div class="col-sm-9">
-											<input type="text" id="form-field-1" placeholder="IDCard" class="col-xs-10 col-sm-5" />
+											<input type="text" id="idcard" placeholder="IDCard" class="col-xs-10 col-sm-5" />
 										</div>
 									</div>	
 									<div class="form-group">
-                						<label class="col-sm-3 control-label no-padding-right" for="telephone"> 客户预留电话 </label>
+                						<label class="col-sm-3 control-label no-padding-right" for="zsphone"> 客户预留电话 </label>
                 						<div class="col-sm-9 ">
                     						<div class="input-group">
 												<span class="input-group-addon">
 													<i class="ace-icon fa fa-phone"></i>
 												</span>
-												<input class="form-control input-mask-phone "  type="text" name="telephone"  id="telephone" style="width:316px"/>
+												<input class="form-control input-mask-phone "  type="text" name="telephone"  id="zsphone" style="width:316px"/>
 											</div>
                 						</div>
             						</div>
@@ -631,9 +631,9 @@
                 						<label class="col-sm-3 control-label no-padding-right" for="room_type"> 房间类型 </label>
                 						<div class="col-sm-9">
                     						<select class="col-xs-10 col-sm-5" id="room_type" name="room_type" style="width: 100px;">
-													<option value="1">单人间</option>
-													<option value="2">双人间</option>
-													<option value="3">三个人</option>
+													<option value="单人间">单人间</option>
+													<option value="双人间">双人间</option>
+													<option value="三人间">三人间</option>
                     						</select>
                 						</div>
             						</div>
@@ -649,22 +649,16 @@
                 						</div>
     								</div>			
     								<div class="form-group">
-										<label class="col-sm-3 control-label no-padding-right" for="form-input-readonly"> 房间押金  </label>
+										<label class="col-sm-3 control-label no-padding-right" for="deposit"> 房间押金  </label>
 
 										<div class="col-sm-9">
-											<input readonly="" type="text" class="col-xs-10 col-sm-5" value="100" />
-											<span class="help-inline col-xs-12 col-sm-7" >
-												<label class="middle" style="width: 80px;">
-													<input class="ace"  type="checkbox" id="id-disable-check"  />
-												</label>
-											</span>
+											<input readonly="" type="text" id="deposit" class="col-xs-10 col-sm-5" value="100" />
 										</div>
 									</div>
 									
 
 									<div class="form-group">
 										<label class="col-sm-3 control-label no-padding-right"> 房间费用</label>
-
 										<div class="col-sm-9">
 											<!-- #section:elements.form.input-icon -->
 											<span class="input-icon">
@@ -679,7 +673,7 @@
 
 									<div class="clearfix form-actions">
 										<div class="col-md-offset-3 col-md-9" style="left: 160px;">
-											<button class="btn btn-info" type="button" style="margin: auto;">
+											<button class="btn btn-info" type="button" id="checkin" style="margin: auto;">
 												<i class="ace-icon fa fa-check bigger-110"></i>
 												Submit
 											</button>

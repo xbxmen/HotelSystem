@@ -162,7 +162,7 @@
 
 				<ul class="nav nav-list">
 					<li class="active">
-						<a href="main.php">
+						<a href="HomePage.php">
 							<i class="menu-icon fa fa-tachometer"></i>
 							<span class="menu-text"> HomePage </span>
 						</a>
